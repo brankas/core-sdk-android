@@ -22,15 +22,27 @@
 
 This set of instructions assumes that the IDE being used is Android Studio
 
-1. Copy the **direct-tap-sdk-22-2.4.0.aar** file and put it inside the libs folder of your app directory. 
+1. In your project build.gradle, ensure to add the URL of the repository under maven. Here is a sample:
+	```
+	allprojects {
+    	repositories {
+        		maven {
+            		url = "https://maven.pkg.github.com/brankas/core-sdk-android"
+            		credentials {
+                			username = ""
+                			password = ""
+            		}
+        		}
+    	}
+}
+	```
+**NOTE: You can use any GitHub Account in filling up the credentials**
 
-	**NOTE:** If the libs folder could not be found, create the libs folder by navigating to the Project Tab then look for the **app** directory. Then, right click the directory and select New > Directory. In text field, enter libs then click ok to close it down and create the folder.
-
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation fileTree(dir: 'libs', include:['*.aar'])** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:2.4.0"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    	implementation "com.brankas.tap:direct-tap:2.4.0"
 	}
 
 3. Inside the the same dependencies configuration, insert the following lines to enable gRPC Connections which are needed by the SDK. Also, include RxJava for asynchronous listening to the results. **Do not forget to include compileOptions and kotlinOptions to use Java 8**
