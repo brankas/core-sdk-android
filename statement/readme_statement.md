@@ -1,6 +1,6 @@
 # Statement Tap SDK for Android
 ***
-*Version:* 1.1.0
+*Version:* 1.2.0
 ***
 
 
@@ -38,11 +38,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:1.1.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:1.2.0"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:statement-tap:1.1.0"
+    	implementation "com.brankas.tap:statement-tap:1.2.0"
 	}
 
 
@@ -85,9 +85,9 @@ This set of instructions assumes that the IDE being used is Android Studio
 
 	```java
 
-	import `as`.brank.sdk.tap.statement.StatementTapSDK
+	import as.brank.sdk.tap.statement.StatementTapSDK;
 
-	StatementTapSDK.initialize(context, apiKey, null);
+	StatementTapSDK.INSTANCE.initialize(context, apiKey, null, false);
 
 	```
 
@@ -123,52 +123,51 @@ Here is a sample on how to use it and call:
 
 ```java
 
-import `as`.brank.sdk.tap.statement.StatementTapSDK
-import `as`.brank.sdk.core.CoreError
-import `as`.brank.sdk.tap.TapListener
-import tap.common*
+import as.brank.sdk.tap.statement.StatementTapSDK;
+import as.brank.sdk.core.CoreError;
+import as.brank.sdk.tap.TapListener;
+import tap.common*;
 
-val request = StatementTapRequest.Builder()
+StatementTapRequest.Builder request = new StatementTapRequest.Builder()
             .country(Country.PH)
             .externalId("External ID")
             .successURL("https://google.com")
             .failURL("https://hello.com")
-            .organizationName("Organization Name")
+            .organizationName("Organization Name");
 
-StatementTapSDK.checkout(this, request.build(), object: TapListener<String?> {
-    override fun onResult(data: String?, error: CoreError?) {
-         error?.let {
-              println(error?.errorMessage)
-         } ?: run {
-              	println("Transaction Successful! Here is the transaction id: $data")
-              }
+StatementTapSDK.INSTANCE.checkout(this, request.build(), new TapListener<String>() {
+
+	@Override
+    public void onResult(data: String?, error: CoreError?) {
+    	if(data != null) {
+		System.out.println("Transaction Successful! Here is the transaction id: " + data);
+	}
     }
 
-    override fun onTapStarted() {
-
-    }
-
-    override fun onTapEnded() {
+	@Override
+    public void onTapStarted() {
 
     }
 
-}, requestCode)
+	@Override
+    public void onTapEnded() {
+
+    }
+
+}, requestCode, false, true);
 
 
-override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if(this@MainActivity.requestCode == requestCode) {
+@Override
+public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
             if(resultCode == RESULT_OK) {
-                val statementId = data?.getStringExtra(StatementTapSDK.STATEMENT_ID)
-                println("Transaction Successful! Here is the statement id: $statementId")
+                String statementId = data.getStringExtra(StatementTapSDK.STATEMENT_ID);
+                System.out.println("Transaction Successful! Here is the statement id: " + statementId);
             }
 
             else {
-                data?.getStringExtra(StatementTapSDK.ERROR)?.let {
-                    println(it)
-                }
+                System.out.println("ERROR: "+ data.getStringExtra(StatementTapSDK.ERROR);
             }
-        }
     }
 ```
 

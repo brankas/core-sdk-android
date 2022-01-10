@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 2.4.0
+*Version:* 2.5.0
 ***
 
 
@@ -38,11 +38,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:2.4.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:2.5.0"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:direct-tap:2.4.0"
+    	implementation "com.brankas.tap:direct-tap:2.5.0"
 	}
 
 3. Inside the the same dependencies configuration, insert the following lines to enable gRPC Connections which are needed by the SDK. Also, include RxJava for asynchronous listening to the results. **Do not forget to include compileOptions and kotlinOptions to use Java 8**
@@ -85,9 +85,9 @@ This set of instructions assumes that the IDE being used is Android Studio
 
 	```java
 
-	import `as`.brank.sdk.tap.direct.DirectTapSDK
+	import as.brank.sdk.tap.direct.DirectTapSDK;
 
-	DirectTapSDK.initialize(context, apiKey, null);
+	DirectTapSDK.INSTANCE.initialize(context, apiKey, null, false);
 
 	```
 
@@ -128,16 +128,16 @@ Here is a sample on how to use it and call:
 
 ```java
 
-import `as`.brank.sdk.core.CoreError
-import `as`.brank.sdk.tap.TapListener
-import `as`.brank.sdk.tap.direct.DirectTapSDK
-import tap.common.*
-import tap.common.direct.*
-import tap.common.direct.Currency
-import tap.direct.DirectTapRequest
+import as.brank.sdk.core.CoreError;
+import as.brank.sdk.tap.TapListener;
+import as.brank.sdk.tap.direct.DirectTapSDK;
+import tap.common.*;
+import tap.common.direct.*;
+import tap.common.direct.Currency;
+import tap.direct.DirectTapRequest;
 
-DirectTapSDK.checkout(activity, 
-	DirectTapRequest.Builder()
+DirectTapSDK.INSTANCE.checkout(activity, 
+	new DirectTapRequest.Builder()
         	.sourceAccount(new Account(null, Country.PH))
         	.destinationAccountId("2149bhds-bb56-11rt-acdd-86667t74b165")
         	.amount(new Amount(Currency.PHP, "10000"))
@@ -145,7 +145,26 @@ DirectTapSDK.checkout(activity,
         	.customer(new Customer("Owner", "Name", "sample@brankas.com", "63"))
         	.client(new Client("Sample Client", null, "www.google.com"))
         	.referenceId("sample-reference").build(),
-	new CoreListener<String> {
+	new TapListener<String> {
+	@Override
+            public void onTapStarted() {
+
+            }
+
+            @Override
+            public void onTapEnded() {
+
+            }
+
+            @Override
+            public void onResult(@Nullable String str, @Nullable CoreError coreError) {
+                if(coreError != null) {
+                    showProgress(false);
+                    showMessage(coreError.getErrorMessage());
+                }
+                else
+                    showMessage("Transaction Successful! Here is the transaction id: "+str);
+            }
         	@Override
         	public void onResult(String transactionId, CoreError error) {
 

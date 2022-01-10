@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.2.0 - 2022-01-06
+
+### Fixed
+
+- End of transaction (success or failure) detection within the WebView for the new URL Format
+
 ## 1.1.0 - 2021-10-25
 
 ### Changed
