@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.3.1 - 2022-01-17
+
+### Fixed
+
+- automatic closing of Internal WebView when success or fail URL's do not start with *https*
+
 ## 1.3.0 - 2022-01-12
 
 ### Added
