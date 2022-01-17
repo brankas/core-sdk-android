@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.3.0 - 2022-01-12
+
+### Added
+
+- function for retrieving the current SDK Version
+- function for retrieving the Mobile Application Signature (either in SHA1, SHA256 or MD5 format)
+- support for transactional retries within the WebView
+
 ## 1.2.0 - 2022-01-06
 
 ### Fixed
