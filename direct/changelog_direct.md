@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.7.0 - 2022-01-25
+
+### Added
+
+-  private **terminate()** function which is explicitly called when Internal WebView is destroyed
+
 ## 2.6.1 - 2022-01-17
 
 ### Fixed
