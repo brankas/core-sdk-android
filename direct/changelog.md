@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.7.1 - 2022-01-28
+
+### Fixed
+
+- closing of fragment when success, failed or cancelled URL's are detected
+- showing of dismissal dialog when back button is pressed for fragment implementation
+
+### Changed
+
+- arrow color for fragment implementation as optional
+
+### Added
+
+-  private **terminate()** function which is explicitly called when Internal WebView is destroyed
+
 ## 2.7.0 - 2022-01-25
 
 ### Added

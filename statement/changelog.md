@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.3.2 - 2022-01-28
+
+### Fixed
+
+- closing of fragment when success, failed or cancelled URL's are detected
+- showing of dismissal dialog when back button is pressed for fragment implementation
+
+### Changed
+
+- arrow color for fragment implementation as optional
+
 ## 1.3.1 - 2022-01-17
 
 ### Fixed
