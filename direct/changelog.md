@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2022-02-04
+
+### Fixed
+
+-  crash within the Fragment if device goes to sleep mode or has been locked
+-  minimized calling of the terminate() function
+
+### Changed
+
+- removed the interface **TapListener** and replaced with the existing **CoreListener** for returning transaction
+- transaction id to **Transaction** object for the CoreListener callback
+- renamed overloaded **checkout** function for launching the internal WebView within Fragment to **checkoutViaFragment** to avoid confusion of using the Activity alternative
+- removed **showInBrowser** option within DirectTapRequest because a dedicated method has been created to accommodate the retrieval of checkout URL
+
+### Added
+
+-  internal function to call the retrieve transaction API Service to return the **Transaction** object every after Tap Web Session
+-  a separate function called **retrieveCheckoutURL** for returning the checkout URL if client opts to launch a WebView manually
+-  **getSourceBanks()** function to retrieve available banks for a specified destination bank
+
 ## 2.7.1 - 2022-01-28
 
 ### Fixed
