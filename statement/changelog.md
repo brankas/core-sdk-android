@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.4.0 - 2022-02-10
+
+### Fixed
+
+- crash when pressing the Home Button or PowerLock Button while Tap Web App is seen in the Host App (only applicable when Fragment Implementation is used)
+
+### Changed
+
+- renamed overloaded checkout() function for Fragment Implementation to **checkoutViaFragment** to avoid confusion with the Activity Implementation
+- **useRememberMe** default value to **false** in both **checkout()** and **checkoutViaFragment()** options
+- removed the interface **TapListener** and replaced with the existing **CoreListener** for returning transaction
+
 ## 1.3.2 - 2022-01-28
 
 ### Fixed

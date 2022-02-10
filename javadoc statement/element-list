@@ -1,0 +1,14 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:as.brank.sdk.core.statement/StatementErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/statement/StatementErrorCode.Companion.html
+$dokka.location:as.brank.sdk.core/CoreErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/CoreErrorCode.Companion.html
+$dokka.location:tap.common/BankCode.Companion///PointingToDeclaration/tap/common/BankCode.Companion.html
+$dokka.location:tap.common/Country.Companion///PointingToDeclaration/tap/common/Country.Companion.html
+$dokka.location:tap.common/Reference.Companion///PointingToDeclaration/tap/common/Reference.Companion.html
+$dokka.location:tap.statement/StatementTapRequest.Builder///PointingToDeclaration/tap/statement/StatementTapRequest.Builder.html
+as.brank.sdk.core
+as.brank.sdk.core.statement
+as.brank.sdk.tap.statement
+tap.common
+tap.statement
+
