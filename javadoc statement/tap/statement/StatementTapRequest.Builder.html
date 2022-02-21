@@ -207,14 +207,14 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                         </tr>
                                         
                                         <tr class="rowColor">
-                                            <td class="colFirst"><code>private  <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#showInBrowser>showInBrowser</a></code></th>
+                                            <td class="colFirst"><code>private  <a href=../common/DismissalDialog.html>DismissalDialog</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#dismissalDialog>dismissalDialog</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="altColor">
-                                            <td class="colFirst"><code>private  <a href=../common/DismissalDialog.html>DismissalDialog</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#dismissalDialog>dismissalDialog</a></code></th>
+                                            <td class="colFirst"><code>private  <a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#statementRetrievalRequest>statementRetrievalRequest</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
@@ -244,7 +244,7 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                         
                                             <tr class="altColor">
                                                 <th class="colConstructorName" scope="row"><code><span class="memberNameLink"><a
-                                                        href="#StatementTapRequest.Builder(Country,List,String,String,String,String,Long,Boolean,DismissalDialog)">StatementTapRequest.Builder</a></span>(<a href=../common/Country.html>Country</a> country, <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../common/BankCode.html>BankCode</a>&gt; bankCodes, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> externalId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> successURL, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> failURL, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> organizationName, <a href=https://developer.android.com/reference/kotlin/java/lang/Long.html>Long</a> redirectDuration, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> showInBrowser, <a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog)</code></th>
+                                                        href="#StatementTapRequest.Builder(Country,List,String,String,String,String,Long,DismissalDialog,StatementRetrievalRequest)">StatementTapRequest.Builder</a></span>(<a href=../common/Country.html>Country</a> country, <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../common/BankCode.html>BankCode</a>&gt; bankCodes, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> externalId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> successURL, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> failURL, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> organizationName, <a href=https://developer.android.com/reference/kotlin/java/lang/Long.html>Long</a> redirectDuration, <a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog, <a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a> statementRetrievalRequest)</code></th>
                                                 <td class="colLast"></td>
                                             </tr>
                                         
@@ -410,22 +410,6 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                         </tr>
                                         
                                         <tr id="i14" class="altColor">
-                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#getShowInBrowser()>getShowInBrowser</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i15" class="rowColor">
-                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#setShowInBrowser(Boolean)>setShowInBrowser</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> showInBrowser) </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i16" class="altColor">
                                             <td class="colFirst"><code>final <a href=../common/DismissalDialog.html>DismissalDialog</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#getDismissalDialog()>getDismissalDialog</a>() </code>
@@ -433,10 +417,26 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr id="i17" class="rowColor">
+                                        <tr id="i15" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#setDismissalDialog(DismissalDialog)>setDismissalDialog</a>(<a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog) </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i16" class="altColor">
+                                            <td class="colFirst"><code>final <a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#getStatementRetrievalRequest()>getStatementRetrievalRequest</a>() </code>
+                                            </th>
+                                            <td class="colLast"></td>
+                                        </tr>
+                                        
+                                        <tr id="i17" class="rowColor">
+                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#setStatementRetrievalRequest(StatementRetrievalRequest)>setStatementRetrievalRequest</a>(<a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a> statementRetrievalRequest) </code>
                                             </th>
                                             <td class="colLast"></td>
                                         </tr>
@@ -500,17 +500,17 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                         <tr id="i25" class="rowColor">
                                             <td class="colFirst"><code>final <a href=StatementTapRequest.Builder.html>StatementTapRequest.Builder</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#showInBrowser(Boolean)>showInBrowser</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> showInBrowser) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#dismissalDialog(DismissalDialog)>dismissalDialog</a>(<a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog) </code>
                                             </th>
-                                            <td class="colLast">updates <a href=StatementTapRequest.Builder.html#showInBrowser(Boolean)>showInBrowser</a> value inside the builder</td>
+                                            <td class="colLast">updates <a href=StatementTapRequest.Builder.html#dismissalDialog(DismissalDialog)>dismissalDialog</a> value inside the builder</td>
                                         </tr>
                                         
                                         <tr id="i26" class="altColor">
                                             <td class="colFirst"><code>final <a href=StatementTapRequest.Builder.html>StatementTapRequest.Builder</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#dismissalDialog(DismissalDialog)>dismissalDialog</a>(<a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapRequest.Builder.html#statementRetrievalRequest(StatementRetrievalRequest)>statementRetrievalRequest</a>(<a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a> statementRetrievalRequest) </code>
                                             </th>
-                                            <td class="colLast">updates <a href=StatementTapRequest.Builder.html#dismissalDialog(DismissalDialog)>dismissalDialog</a> value inside the builder</td>
+                                            <td class="colLast">updates <a href=StatementTapRequest.Builder.html#statementRetrievalRequest(StatementRetrievalRequest)>statementRetrievalRequest</a> value inside the builder</td>
                                         </tr>
                                         
                                         <tr id="i27" class="rowColor">
@@ -552,11 +552,11 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                             </a>
                                 <h3>Constructor Detail</h3>
                                 
-                                <a name="StatementTapRequest.Builder(Country,List,String,String,String,String,Long,Boolean,DismissalDialog)"></a>
+                                <a name="StatementTapRequest.Builder(Country,List,String,String,String,String,Long,DismissalDialog,StatementRetrievalRequest)"></a>
                                 <ul class="blockList">
                                     <li class="blockList">
                                         <h4>StatementTapRequest.Builder</h4>
-                                        <pre>StatementTapRequest.Builder(<a href=../common/Country.html>Country</a> country, <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../common/BankCode.html>BankCode</a>&gt; bankCodes, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> externalId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> successURL, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> failURL, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> organizationName, <a href=https://developer.android.com/reference/kotlin/java/lang/Long.html>Long</a> redirectDuration, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> showInBrowser, <a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog)</pre>
+                                        <pre>StatementTapRequest.Builder(<a href=../common/Country.html>Country</a> country, <a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../common/BankCode.html>BankCode</a>&gt; bankCodes, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> externalId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> successURL, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> failURL, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> organizationName, <a href=https://developer.android.com/reference/kotlin/java/lang/Long.html>Long</a> redirectDuration, <a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog, <a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a> statementRetrievalRequest)</pre>
                                         <div class="block"></div>
                                         
                                     </li>
@@ -785,36 +785,6 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                     </li>
                                 </ul>
                                 
-                                <a id="getShowInBrowser()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getShowInBrowser</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> <a href=StatementTapRequest.Builder.html#getShowInBrowser()>getShowInBrowser</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="setShowInBrowser(Boolean)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>setShowInBrowser</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapRequest.Builder.html#setShowInBrowser(Boolean)>setShowInBrowser</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> showInBrowser)</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
                                 <a id="getDismissalDialog()">
                                     <!--   -->
                                 </a>
@@ -839,6 +809,36 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                     <li class="blockList">
                                         <h4>setDismissalDialog</h4>
                                         <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapRequest.Builder.html#setDismissalDialog(DismissalDialog)>setDismissalDialog</a>(<a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog)</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getStatementRetrievalRequest()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getStatementRetrievalRequest</h4>
+                                        <pre class="methodSignature"> final <a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a> <a href=StatementTapRequest.Builder.html#getStatementRetrievalRequest()>getStatementRetrievalRequest</a>()</pre>
+                                        <div class="block"></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="setStatementRetrievalRequest(StatementRetrievalRequest)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>setStatementRetrievalRequest</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapRequest.Builder.html#setStatementRetrievalRequest(StatementRetrievalRequest)>setStatementRetrievalRequest</a>(<a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a> statementRetrievalRequest)</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -950,21 +950,6 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                     </li>
                                 </ul>
                                 
-                                <a id="showInBrowser(Boolean)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>showInBrowser</h4>
-                                        <pre class="methodSignature"> final <a href=StatementTapRequest.Builder.html>StatementTapRequest.Builder</a> <a href=StatementTapRequest.Builder.html#showInBrowser(Boolean)>showInBrowser</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> showInBrowser)</pre>
-                                        <div class="block"><p>updates <a href=StatementTapRequest.Builder.html#showInBrowser(Boolean)>showInBrowser</a> value inside the builder</p></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
                                 <a id="dismissalDialog(DismissalDialog)">
                                     <!--   -->
                                 </a>
@@ -975,6 +960,21 @@ public final class <span class="typeNameLabel"><a href=StatementTapRequest.Build
                                         <h4>dismissalDialog</h4>
                                         <pre class="methodSignature"> final <a href=StatementTapRequest.Builder.html>StatementTapRequest.Builder</a> <a href=StatementTapRequest.Builder.html#dismissalDialog(DismissalDialog)>dismissalDialog</a>(<a href=../common/DismissalDialog.html>DismissalDialog</a> dismissalDialog)</pre>
                                         <div class="block"><p>updates <a href=StatementTapRequest.Builder.html#dismissalDialog(DismissalDialog)>dismissalDialog</a> value inside the builder</p></div>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="statementRetrievalRequest(StatementRetrievalRequest)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>statementRetrievalRequest</h4>
+                                        <pre class="methodSignature"> final <a href=StatementTapRequest.Builder.html>StatementTapRequest.Builder</a> <a href=StatementTapRequest.Builder.html#statementRetrievalRequest(StatementRetrievalRequest)>statementRetrievalRequest</a>(<a href=StatementRetrievalRequest.html>StatementRetrievalRequest</a> statementRetrievalRequest)</pre>
+                                        <div class="block"><p>updates <a href=StatementTapRequest.Builder.html#statementRetrievalRequest(StatementRetrievalRequest)>statementRetrievalRequest</a> value inside the builder</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

@@ -242,7 +242,7 @@ DirectTapSDK.checkout(activity,
 
 # Statement Tap SDK for Android
 ***
-*Version:* 1.4.0
+*Version:* 2.0.1
 ***
 
 
@@ -280,11 +280,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:1.4.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:2.0.1"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:statement-tap:1.4.0"
+    	implementation "com.brankas.tap:statement-tap:2.0.1"
 	}
 
 
@@ -338,7 +338,7 @@ plugins {
 
 	```java
 
-	import as.brank.sdk.tap.direct.StatementTapSDK;
+	import as.brank.sdk.tap.statement.StatementTapSDK;
 
 	StatementTapSDK.INSTANCE.initialize(context, apiKey, null, false);
 
@@ -348,7 +348,7 @@ plugins {
 
 	```kotlin
 
-	import `as`.brank.sdk.tap.direct.StatementTapSDK
+	import `as`.brank.sdk.tap.statement.StatementTapSDK
 
 	StatementTapSDK.initialize(context, apiKey, null, false)
 
@@ -377,9 +377,9 @@ In order to use the checkout function, an **StatementTapRequest** is needed to b
 
 7. **redirectDuration** - refers to the time in seconds when the user should be redirected upon finishing statement retrieval. The default value is *60 seconds*.
 
-8. **showInBrowser** - option to let the SDK create the WebView in behalf of the Android Application. The default value is *true*
+8. **dismissalDialog** - pertains to the showing of alert dialog when closing the WebView. It consists of **message**, **positiveButtonText** and **negativeButtonText**. Just set this value to *null** to remove the alert dialog when closing the application.
 
-9. **dismissalDialog** - pertains to the showing of alert dialog when closing the WebView. It consists of **message**, **positiveButtonText** and **negativeButtonText**. Just set this value to *null** to remove the alert dialog when closing the application.
+9. **statementRetrievalRequest** - pertains to the statement retrieval after Tap Web Session. **startDate** and **endDate** can be configured to retrieve transactions within date range
 
 Here is a sample on how to use it and call:
 <br/><br/> **Kotlin:**
@@ -522,13 +522,4 @@ If the internal WebView is opted not to be used (**showInBrowser** is **false**)
 
 The **isAutoConsent** in the **checkout** function is set to false by default. To enable its usage, just set the 2nd to the last parameter to true
 
-The **useRememberMe** in the **checkout** function is set to true by default. To disable the usage of Remember Me inside the Tap Web Application, just pass false to the last parameter in the checkout function
-
-
-
-
-
-
-
-
-
+The **useRememberMe** in the **checkout** function is set to false by default. To enable the usage of Remember Me inside the Tap Web Application, just pass false to the last parameter in the checkout function

@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.0.1 - 2022-02-21
+
+### Fixed
+
+- missing classes that are not generated properly
+
+## 2.0.0 - 2022-02-17
+
+### Added
+
+- option to do Statement Retrieval via **StatementRetrievalRequest** passed inside **StatementTapRequest** after Tap Web Session
+- added separate function **retrieveCheckoutURL** to get the checkout URL
+- added **getEnabledBanks** function to retrieve available banks for statement retrieval
+
+### Changed
+
+- removed **showInBrowser** option from **StatementTapRequest** because just retrieving the URL is already in another function
+- **bankCodes** from **StatementTapRequest** now accepts **null** value; if it is set to null, automatically all enabled banks will be shown in the Tap Web Application
+
+
 ## 1.4.0 - 2022-02-10
 
 ### Fixed
