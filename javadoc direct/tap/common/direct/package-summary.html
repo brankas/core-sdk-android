@@ -119,11 +119,15 @@ var pathtoroot = "../../../";
 
     <tr class="rowColor"><th class="colFirst" scope="row"><a href=Address.html>Address</a></th><td class="colLast"><a href=Customer.html>Customer</a> component that refers to the address</td></tr>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=Amount.html>Amount</a></th><td class="colLast">DirectTapRequest component that refers to the amount to be transferred</td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=Bank.html>Bank</a></th><td class="colLast">refers to the source bank object</td></tr>
 
     <tr class="rowColor"><th class="colFirst" scope="row"><a href=Client.html>Client</a></th><td class="colLast">DirectTapRequest component that is used to customize the Tap Web Application</td></tr>
 
     <tr class="altColor"><th class="colFirst" scope="row"><a href=Customer.html>Customer</a></th><td class="colLast">DirectTapRequest component that refers to the personal details of the user or the one to transfer the money</td></tr>
+
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=FundTransferFee.html>FundTransferFee</a></th><td class="colLast">contains the additional fee for bank transfer</td></tr>
+
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=FundTransferLimit.html>FundTransferLimit</a></th><td class="colLast">contains the minimum and maximum bank transfer amount for intrabank and interbank transactions</td></tr>
 
     <tr class="rowColor"><th class="colFirst" scope="row"><a href=Transaction.html>Transaction</a></th><td class="colLast">refers to the transaction object returned every after Tap Web Session</td></tr>
 </tbody>
@@ -149,9 +153,7 @@ var pathtoroot = "../../../";
 </tr>
 <tbody>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=Currency.Companion.html>Companion</a></th><td class="colLast"></td></tr>
-
-    <tr class="rowColor"><th class="colFirst" scope="row"><a href=Status.Companion.html>Companion</a></th><td class="colLast"></td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=Status.Companion.html>Companion</a></th><td class="colLast"></td></tr>
 </tbody>
 </table>
 
@@ -175,11 +177,9 @@ var pathtoroot = "../../../";
 </tr>
 <tbody>
 
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=Currency.html>Currency</a></th><td class="colLast"><a href=Amount.html>Amount</a> component that refers to all of the currencies supported by Brankas</td></tr>
+    <tr class="altColor"><th class="colFirst" scope="row"><a href=Status.html>Status</a></th><td class="colLast"><a href=Transaction.html>Transaction</a> component that refers to the status of the operation whether it is successful, failed, etc.</td></tr>
 
-    <tr class="rowColor"><th class="colFirst" scope="row"><a href=Status.html>Status</a></th><td class="colLast"><a href=Transaction.html>Transaction</a> component that refers to the status of the operation whether it is successful, failed, etc.</td></tr>
-
-    <tr class="altColor"><th class="colFirst" scope="row"><a href=UniqueAmount.html>UniqueAmount</a></th><td class="colLast">DirectTapRequest component that refers to the enabling of centavo reconciliation workaround logic</td></tr>
+    <tr class="rowColor"><th class="colFirst" scope="row"><a href=UniqueAmount.html>UniqueAmount</a></th><td class="colLast">DirectTapRequest component that refers to the enabling of centavo reconciliation workaround logic</td></tr>
 </tbody>
 </table>
 

@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.1.0 - 2022-03-28
+
+### Changed
+
+-  getSourceBanks parameter from CoreListener<List<BankCode>> to CoreListener<List<Bank>>
+
+### Added
+
+-  **Bank** class that includes **FundTransferLimit** (pertains to bank transfer minimum and maximum amounts), **FundTransferFee** (pertains to interbank and interbank transfer fees, if there are), **country**, **logo URL**, **name of the bank** and its corresponding **BankCode**
+
+
 ## 3.0.0 - 2022-02-04
 
 ### Fixed

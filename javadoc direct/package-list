@@ -2,10 +2,10 @@ $dokka.format:javadoc-v1
 $dokka.linkExtension:html
 $dokka.location:as.brank.sdk.core.direct/DirectErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/direct/DirectErrorCode.Companion.html
 $dokka.location:as.brank.sdk.core/CoreErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/CoreErrorCode.Companion.html
-$dokka.location:tap.common.direct/Currency.Companion///PointingToDeclaration/tap/common/direct/Currency.Companion.html
 $dokka.location:tap.common.direct/Status.Companion///PointingToDeclaration/tap/common/direct/Status.Companion.html
 $dokka.location:tap.common/BankCode.Companion///PointingToDeclaration/tap/common/BankCode.Companion.html
 $dokka.location:tap.common/Country.Companion///PointingToDeclaration/tap/common/Country.Companion.html
+$dokka.location:tap.common/Currency.Companion///PointingToDeclaration/tap/common/Currency.Companion.html
 $dokka.location:tap.common/Reference.Companion///PointingToDeclaration/tap/common/Reference.Companion.html
 $dokka.location:tap.direct/DirectTapRequest.Builder///PointingToDeclaration/tap/direct/DirectTapRequest.Builder.html
 as.brank.sdk.core
