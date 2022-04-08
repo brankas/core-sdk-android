@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.2.0 - 2022-04-08
+
+### Changed
+
+-  package from **tap.common** to **tap.model**
+-  **Bank logoUrl** format from **SVG** to **PNG** 
+
 ## 3.1.0 - 2022-03-28
 
 ### Changed

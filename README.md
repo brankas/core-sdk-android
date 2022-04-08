@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 3.1.0
+*Version:* 3.2.0
 ***
 
 
@@ -38,10 +38,10 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:3.1.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:3.2.0"** to set the SDK as a dependency for the application. This should look like:
 	````gradle
 	dependencies {
-    	implementation "com.brankas.tap:direct-tap:3.1.0"
+    	implementation "com.brankas.tap:direct-tap:3.2.0"
 	}
 	````
 
@@ -96,7 +96,7 @@ plugins {
 
 	```java
 
-	import as.brank.sdk.tap.direct.DirectTapSDK;
+	import as.brank.sdk.tap.request.direct.DirectTapSDK;
 
 	DirectTapSDK.INSTANCE.initialize(context, apiKey, null, false);
 
@@ -106,7 +106,7 @@ plugins {
 
 	```kotlin
 
-	import `as`.brank.sdk.tap.direct.DirectTapSDK
+	import `as`.brank.sdk.tap.request.direct.DirectTapSDK
 
 	DirectTapSDK.initialize(context, apiKey, null, false)
 
@@ -148,48 +148,48 @@ Here is a sample on how to use it and call:
 ```java
 import as.brank.sdk.core.CoreError;
 import as.brank.sdk.tap.CoreListener;
-import as.brank.sdk.tap.direct.DirectTapSDK;
-import tap.common.direct.*;
-import tap.common.direct.Currency;
-import tap.direct.DirectTapRequest;
-import tap.common.Reference;
-import tap.common.direct.Transaction;
-import tap.common.BankCode;
-import tap.common.Country;
-import tap.common.DismissalDialog;
-import tap.common.direct.Currency;
+import as.brank.sdk.tap.request.direct.DirectTapSDK;
+import tap.model.direct.*;
+import tap.model.Currency;
+import tap.request.direct.DirectTapRequest;
+import tap.model.Reference;
+import tap.model.direct.Transaction;
+import tap.model.BankCode;
+import tap.model.Country;
+import tap.model.DismissalDialog;
+import tap.model.Currency;
 
-DirectTapSDK.INSTANCE.checkout(activity, 
-	new DirectTapRequest.Builder()
-        	.sourceAccount(new Account(null, Country.PH))
-        	.destinationAccountId("2149bhds-bb56-11rt-acdd-86667t74b165")
-        	.amount(new Amount(Currency.PHP, "10000"))
-        	.memo("Sample Bank Transfer")
-        	.customer(new Customer("Owner", "Name", "sample@brankas.com", "63"))
-        	.client(new Client("Sample Client", null, "www.google.com"))
-        	.referenceId("sample-reference").build(),
-	new CoreListener<String> {
-            @Override
-            public void onResult(@Nullable String str, @Nullable CoreError coreError) {
-                if(coreError != null)
-                    System.out.println("Error: "+coreError.getErrorMessage());
-            }
-	}, 1000);
+DirectTapSDK.INSTANCE.checkout(activity,
+        new DirectTapRequest.Builder()
+        .sourceAccount(new Account(null,Country.PH))
+        .destinationAccountId("2149bhds-bb56-11rt-acdd-86667t74b165")
+        .amount(new Amount(Currency.PHP,"10000"))
+        .memo("Sample Bank Transfer")
+        .customer(new Customer("Owner","Name","sample@brankas.com","63"))
+        .client(new Client("Sample Client",null,"www.google.com"))
+        .referenceId("sample-reference").build(),
+        new CoreListener<String> {
+@Override
+public void onResult(@Nullable String str,@Nullable CoreError coreError){
+        if(coreError!=null)
+        System.out.println("Error: "+coreError.getErrorMessage());
+        }
+        },1000);
 
-	// Used to retrieve the result from Tap Web Application
-	@Override
-	void onActivityResult(int requestCode, int resultCode, Intent data) {
-        	super.onActivityResult(requestCode, resultCode, data);
+// Used to retrieve the result from Tap Web Application
+@Override
+	void onActivityResult(int requestCode,int resultCode,Intent data){
+            super.onActivityResult(requestCode,resultCode,data);
 
-        	if(requestCode == 1000) {
-        	// Transaction is successful
-            		if(resultCode == RESULT_OK) {
-            		// Retrieve transaction
-                		Transaction transaction = data.getParcelableExtra<Reference<Transaction>>(DirectTapSDK.TRANSACTION).get();
-                    		Systemout.println("TRANSACTION ID: "+transaction.getId());
-            		}
-        	}
-    	}
+            if(requestCode==1000){
+            // Transaction is successful
+            if(resultCode==RESULT_OK){
+            // Retrieve transaction
+            Transaction transaction=data.getParcelableExtra<Reference<Transaction>>(DirectTapSDK.TRANSACTION).get();
+        Systemout.println("TRANSACTION ID: "+transaction.getId());
+        }
+        }
+        }
 ````
 
 <br/><br/> **Kotlin:**
@@ -197,16 +197,16 @@ DirectTapSDK.INSTANCE.checkout(activity,
 ```kotlin
 import `as`.brank.sdk.core.CoreError
 import `as`.brank.sdk.tap.CoreListener
-import `as`.brank.sdk.tap.direct.DirectTapSDK
-import tap.common.direct.*
-import tap.common.direct.Currency
-import tap.direct.DirectTapRequest
-import tap.common.Reference
-import tap.common.direct.Transaction
-import tap.common.BankCode
-import tap.common.Country
-import tap.common.DismissalDialog
-import tap.common.direct.Currency
+import `as`.brank.sdk.tap.request.direct.DirectTapSDK
+import tap.model.direct.*;
+import tap.model.Currency;
+import tap.request.direct.DirectTapRequest;
+import tap.model.Reference;
+import tap.model.direct.Transaction;
+import tap.model.BankCode;
+import tap.model.Country;
+import tap.model.DismissalDialog;
+import tap.model.Currency;
 
 DirectTapSDK.checkout(activity, 
 	DirectTapRequest.Builder()

@@ -2,16 +2,16 @@ $dokka.format:javadoc-v1
 $dokka.linkExtension:html
 $dokka.location:as.brank.sdk.core.direct/DirectErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/direct/DirectErrorCode.Companion.html
 $dokka.location:as.brank.sdk.core/CoreErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/CoreErrorCode.Companion.html
-$dokka.location:tap.common.direct/Status.Companion///PointingToDeclaration/tap/common/direct/Status.Companion.html
-$dokka.location:tap.common/BankCode.Companion///PointingToDeclaration/tap/common/BankCode.Companion.html
-$dokka.location:tap.common/Country.Companion///PointingToDeclaration/tap/common/Country.Companion.html
-$dokka.location:tap.common/Currency.Companion///PointingToDeclaration/tap/common/Currency.Companion.html
-$dokka.location:tap.common/Reference.Companion///PointingToDeclaration/tap/common/Reference.Companion.html
-$dokka.location:tap.direct/DirectTapRequest.Builder///PointingToDeclaration/tap/direct/DirectTapRequest.Builder.html
+$dokka.location:tap.model.direct/Status.Companion///PointingToDeclaration/tap/model/direct/Status.Companion.html
+$dokka.location:tap.model/BankCode.Companion///PointingToDeclaration/tap/model/BankCode.Companion.html
+$dokka.location:tap.model/Country.Companion///PointingToDeclaration/tap/model/Country.Companion.html
+$dokka.location:tap.model/Currency.Companion///PointingToDeclaration/tap/model/Currency.Companion.html
+$dokka.location:tap.model/Reference.Companion///PointingToDeclaration/tap/model/Reference.Companion.html
+$dokka.location:tap.request.direct/DirectTapRequest.Builder///PointingToDeclaration/tap/request/direct/DirectTapRequest.Builder.html
 as.brank.sdk.core
 as.brank.sdk.core.direct
 as.brank.sdk.tap.direct
-tap.common
-tap.common.direct
-tap.direct
+tap.model
+tap.model.direct
+tap.request.direct
 
