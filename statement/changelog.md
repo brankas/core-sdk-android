@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.1.0 - 2022-04-18
+
+### Changed
+-  package from **tap.common** to **tap.model**
+-  getEnabledBanks parameter from CoreListener<List<BankCode>> to CoreListener<List<Bank>>
+
+### Added
+
+-  **Bank** class that includes **country**, **logo URL**, **name of the bank** and its corresponding **BankCode**
+
 ## 2.0.1 - 2022-02-21
 
 ### Fixed

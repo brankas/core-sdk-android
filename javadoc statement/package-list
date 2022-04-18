@@ -2,18 +2,18 @@ $dokka.format:javadoc-v1
 $dokka.linkExtension:html
 $dokka.location:as.brank.sdk.core.statement/StatementErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/statement/StatementErrorCode.Companion.html
 $dokka.location:as.brank.sdk.core/CoreErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/CoreErrorCode.Companion.html
-$dokka.location:tap.common.statement/TransactionStatus.Companion///PointingToDeclaration/tap/common/statement/TransactionStatus.Companion.html
-$dokka.location:tap.common.statement/TransactionType.Companion///PointingToDeclaration/tap/common/statement/TransactionType.Companion.html
-$dokka.location:tap.common/BankCode.Companion///PointingToDeclaration/tap/common/BankCode.Companion.html
-$dokka.location:tap.common/Country.Companion///PointingToDeclaration/tap/common/Country.Companion.html
-$dokka.location:tap.common/Currency.Companion///PointingToDeclaration/tap/common/Currency.Companion.html
-$dokka.location:tap.common/Reference.Companion///PointingToDeclaration/tap/common/Reference.Companion.html
-$dokka.location:tap.statement/StatementRetrievalRequest.Builder///PointingToDeclaration/tap/statement/StatementRetrievalRequest.Builder.html
-$dokka.location:tap.statement/StatementTapRequest.Builder///PointingToDeclaration/tap/statement/StatementTapRequest.Builder.html
+$dokka.location:tap.model.statement/TransactionStatus.Companion///PointingToDeclaration/tap/model/statement/TransactionStatus.Companion.html
+$dokka.location:tap.model.statement/TransactionType.Companion///PointingToDeclaration/tap/model/statement/TransactionType.Companion.html
+$dokka.location:tap.model/BankCode.Companion///PointingToDeclaration/tap/model/BankCode.Companion.html
+$dokka.location:tap.model/Country.Companion///PointingToDeclaration/tap/model/Country.Companion.html
+$dokka.location:tap.model/Currency.Companion///PointingToDeclaration/tap/model/Currency.Companion.html
+$dokka.location:tap.model/Reference.Companion///PointingToDeclaration/tap/model/Reference.Companion.html
+$dokka.location:tap.request.statement/StatementRetrievalRequest.Builder///PointingToDeclaration/tap/request/statement/StatementRetrievalRequest.Builder.html
+$dokka.location:tap.request.statement/StatementTapRequest.Builder///PointingToDeclaration/tap/request/statement/StatementTapRequest.Builder.html
 as.brank.sdk.core
 as.brank.sdk.core.statement
 as.brank.sdk.tap.statement
-tap.common
-tap.common.statement
-tap.statement
+tap.model
+tap.model.statement
+tap.request.statement
 

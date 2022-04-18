@@ -242,7 +242,7 @@ DirectTapSDK.checkout(activity,
 
 # Statement Tap SDK for Android
 ***
-*Version:* 2.0.1
+*Version:* 2.1.0
 ***
 
 
@@ -280,11 +280,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:2.0.1"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:2.1.0"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:statement-tap:2.0.1"
+    	implementation "com.brankas.tap:statement-tap:2.1.0"
 	}
 
 
@@ -389,53 +389,8 @@ Here is a sample on how to use it and call:
 import `as`.brank.sdk.tap.statement.StatementTapSDK
 import `as`.brank.sdk.core.CoreError
 import `as`.brank.sdk.tap.CoreListener
-import tap.common.BankCode
-import tap.common.Country
-import tap.common.DismissalDialog
-import tap.statement.StatementTapRequest
-
-val request = StatementTapRequest.Builder()
-            .country(Country.PH)
-            .externalId("External ID")
-            .successURL("https://google.com")
-            .failURL("https://hello.com")
-            .organizationName("Organization Name")
-
-StatementTapSDK.checkout(this, request.build(), object: CoreListener<String>() {
-
-        override fun onResult(data: String?, error: CoreError?) {
-                println("DATA: "+data)
-        }
-
-}, 3000, false, true);
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == 2000) {
-            if(resultCode == RESULT_OK) {
-                val statementId = data?.getStringExtra(StatementTapSDK.STATEMENT_ID)
-                Toast.makeText(this,
-                    "Statement Retrieval Successful! Here is the statement id: $statementId",
-                    Toast.LENGTH_SHORT).show()
-            }
-            else {
-                val error = data?.getStringExtra(StatementTapSDK.ERROR)
-                val errorCode = data?.getStringExtra(StatementTapSDK.ERROR_CODE)
-                Toast.makeText(this, "$error ($errorCode)", Toast.LENGTH_LONG).show()
-            }
-        }
-	}
-```
-
-<br/><br/> **Kotlin:**
-
-```kotlin
-
-import `as`.brank.sdk.tap.statement.StatementTapSDK
-import `as`.brank.sdk.core.CoreError
-import `as`.brank.sdk.tap.CoreListener
-import tap.common.BankCode
-import tap.common.Country
+import tap.model.BankCode
+import tap.model.Country
 import tap.statement.StatementTapRequest
 
 val request = StatementTapRequest.Builder()
@@ -478,8 +433,8 @@ StatementTapSDK.checkout(this, request.build(), object: CoreListener<String>() {
 import as.brank.sdk.tap.statement.StatementTapSDK;
 import as.brank.sdk.core.CoreError;
 import as.brank.sdk.tap.CoreListener;
-import tap.common.BankCode;
-import tap.common.Country;
+import tap.model.BankCode;
+import tap.model.Country;
 import tap.statement.StatementTapRequest;
 
 StatementTapRequest.Builder request = new StatementTapRequest.Builder()

@@ -1,6 +1,6 @@
 # Statement Tap SDK for Android
 ***
-*Version:* 2.0.1
+*Version:* 2.1.0
 ***
 
 
@@ -38,11 +38,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:2.0.1"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:2.1.0"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:statement-tap:2.0.1"
+    	implementation "com.brankas.tap:statement-tap:2.1.0"
 	}
 
 
@@ -96,7 +96,7 @@ plugins {
 
 	```java
 
-	import as.brank.sdk.tap.statement.StatementTapSDK;
+	import as.brank.sdk.tap.request.statement.StatementTapSDK;
 
 	StatementTapSDK.INSTANCE.initialize(context, apiKey, null, false);
 
@@ -106,7 +106,7 @@ plugins {
 
 	```kotlin
 
-	import `as`.brank.sdk.tap.statement.StatementTapSDK
+	import `as`.brank.sdk.tap.request.statement.StatementTapSDK
 
 	StatementTapSDK.initialize(context, apiKey, null, false)
 
@@ -140,61 +140,17 @@ In order to use the checkout function, an **StatementTapRequest** is needed to b
 9. **statementRetrievalRequest** - pertains to the statement retrieval after Tap Web Session. **startDate** and **endDate** can be configured to retrieve transactions within date range
 
 Here is a sample on how to use it and call:
-<br/><br/> **Kotlin:**
-
-```kotlin
-
-import `as`.brank.sdk.tap.statement.StatementTapSDK
-import `as`.brank.sdk.core.CoreError
-import `as`.brank.sdk.tap.CoreListener
-import tap.common.BankCode
-import tap.common.Country
-import tap.common.DismissalDialog
-import tap.statement.StatementTapRequest
-
-val request = StatementTapRequest.Builder()
-            .country(Country.PH)
-            .externalId("External ID")
-            .successURL("https://google.com")
-            .failURL("https://hello.com")
-            .organizationName("Organization Name")
-
-StatementTapSDK.checkout(this, request.build(), object: CoreListener<String>() {
-
-        override fun onResult(data: String?, error: CoreError?) {
-                println("DATA: "+data)
-        }
-
-}, 3000, false, true);
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode == 2000) {
-            if(resultCode == RESULT_OK) {
-                val statementId = data?.getStringExtra(StatementTapSDK.STATEMENT_ID)
-                Toast.makeText(this,
-                    "Statement Retrieval Successful! Here is the statement id: $statementId",
-                    Toast.LENGTH_SHORT).show()
-            }
-            else {
-                val error = data?.getStringExtra(StatementTapSDK.ERROR)
-                val errorCode = data?.getStringExtra(StatementTapSDK.ERROR_CODE)
-                Toast.makeText(this, "$error ($errorCode)", Toast.LENGTH_LONG).show()
-            }
-        }
-	}
-```
 
 <br/><br/> **Kotlin:**
 
 ```kotlin
 
-import `as`.brank.sdk.tap.statement.StatementTapSDK
+import `as`.brank.sdk.tap.request.statement.StatementTapSDK
 import `as`.brank.sdk.core.CoreError
 import `as`.brank.sdk.tap.CoreListener
-import tap.common.BankCode
-import tap.common.Country
-import tap.statement.StatementTapRequest
+import tap.model.BankCode
+import tap.model.Country
+import tap.request.statement.StatementTapRequest
 
 val request = StatementTapRequest.Builder()
             .country(Country.PH)
@@ -233,45 +189,45 @@ StatementTapSDK.checkout(this, request.build(), object: CoreListener<String>() {
 
 ```java
 
-import as.brank.sdk.tap.statement.StatementTapSDK;
+import as.brank.sdk.tap.request.statement.StatementTapSDK;
 import as.brank.sdk.core.CoreError;
 import as.brank.sdk.tap.CoreListener;
-import tap.common.BankCode;
-import tap.common.Country;
-import tap.statement.StatementTapRequest;
+import tap.model.BankCode;
+import tap.model.Country;
+import tap.request.statement.StatementTapRequest;
 
-StatementTapRequest.Builder request = new StatementTapRequest.Builder()
-	.country(Country.PH)
-     	.externalId("External ID")
+StatementTapRequest.Builder request=new StatementTapRequest.Builder()
+        .country(Country.PH)
+        .externalId("External ID")
         .successURL("https://google.com")
         .failURL("https://hello.com")
         .organizationName("Organization Name");
 
-StatementTapSDK.INSTANCE.checkout(this, request.build(), new CoreListener<String>() {
-	@Override
-        public void onResult(String data, CoreError error) {
-                System.out.println("DATA: "+data);
+        StatementTapSDK.INSTANCE.checkout(this,request.build(),new CoreListener<String>(){
+@Override
+public void onResult(String data,CoreError error){
+        System.out.println("DATA: "+data);
         }
 
-}, 3000, false, true);
+        },3000,false,true);
 
 @Override
-public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == 3000) {
-            if(resultCode == RESULT_OK) {
-                String statementId = data.getStringExtra(StatementTapSDK.STATEMENT_ID);
-                Toast.makeText(this,
-                    "Statement Retrieval Successful! Here is the statement id: "+statementId,
-                    Toast.LENGTH_SHORT).show();
-            }
-            else {
-                String error = data.getStringExtra(StatementTapSDK.ERROR);
-                String errorCode = data.getStringExtra(StatementTapSDK.ERROR_CODE);
-                Toast.makeText(this, error + " " +errorCode, Toast.LENGTH_LONG).show();
-            }
+public void onActivityResult(int requestCode,int resultCode,Intent data){
+        super.onActivityResult(requestCode,resultCode,data);
+        if(requestCode==3000){
+        if(resultCode==RESULT_OK){
+        String statementId=data.getStringExtra(StatementTapSDK.STATEMENT_ID);
+        Toast.makeText(this,
+        "Statement Retrieval Successful! Here is the statement id: "+statementId,
+        Toast.LENGTH_SHORT).show();
         }
-	}
+        else{
+        String error=data.getStringExtra(StatementTapSDK.ERROR);
+        String errorCode=data.getStringExtra(StatementTapSDK.ERROR_CODE);
+        Toast.makeText(this,error+" "+errorCode,Toast.LENGTH_LONG).show();
+        }
+        }
+        }
 ```
 
 
