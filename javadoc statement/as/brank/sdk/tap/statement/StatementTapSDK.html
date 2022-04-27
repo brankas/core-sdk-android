@@ -284,7 +284,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                         <tr id="i1" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> actionBarText) </code>
                                             </th>
                                             <td class="colLast">provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</td>
                                         </tr>
@@ -318,7 +318,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#cancelBrowserLaunch()>cancelBrowserLaunch</a>() </code>
                                             </th>
-                                            <td class="colLast">cancels the showing of WebView after calling <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean)>checkout</a></td>
+                                            <td class="colLast">cancels the showing of WebView after calling <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a></td>
                                         </tr>
                                         
                                         <tr id="i6" class="altColor">
@@ -463,7 +463,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                     </li>
                                 </ul>
                                 
-                                <a id="checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean)">
+                                <a id="checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)">
                                     <!--   -->
                                 </a>
                                 <ul class=
@@ -471,7 +471,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                           >
                                     <li class="blockList">
                                         <h4>checkout</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe)</pre>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> actionBarText)</pre>
                                         <div class="block"><p>provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</p></div>
                                         
                                         <dl>
@@ -499,6 +499,10 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             
                                             
                                             <dd><code>useRememberMe</code> - option to use Remember Me function (default value is false)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>actionBarText</code> - optional text in the ActionBar; if null has been passed, the ActionBar will be hidden.</dd>
                                             
                                             
                                         </dl>
@@ -609,7 +613,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                     <li class="blockList">
                                         <h4>cancelBrowserLaunch</h4>
                                         <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#cancelBrowserLaunch()>cancelBrowserLaunch</a>()</pre>
-                                        <div class="block"><p>cancels the showing of WebView after calling <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean)>checkout</a></p></div>
+                                        <div class="block"><p>cancels the showing of WebView after calling <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>

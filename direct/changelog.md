@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.3.0 - 2022-04-27
+
+### Added
+
+-  **LandBank** and **EastWest** Banks in **BankCode** enum list
+-  updating of ActionBar text via **checkout** function; if null is sent, the ActionBar will be hidden
+
 ## 3.2.0 - 2022-04-08
 
 ### Changed

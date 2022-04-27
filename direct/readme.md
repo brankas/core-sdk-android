@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 3.2.0
+*Version:* 3.3.0
 ***
 
 
@@ -38,10 +38,10 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:3.2.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:3.3.0"** to set the SDK as a dependency for the application. This should look like:
 	````gradle
 	dependencies {
-    	implementation "com.brankas.tap:direct-tap:3.2.0"
+    	implementation "com.brankas.tap:direct-tap:3.3.0"
 	}
 	````
 
@@ -240,6 +240,7 @@ DirectTapSDK.checkout(activity,
 
 ***NOTE:*** The **useRememberMe** in the **checkout** function is set to true by default. To disable the usage of Remember Me inside the Tap Web Application, just pass false to the last parameter in the checkout function
 
+The **actionBarText** in the **checkout** function is set to null by default - thus, the ActionBar gets hidden. To show it, just pass a String to it
 
 
 

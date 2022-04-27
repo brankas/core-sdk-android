@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.2.0 - 2022-04-27
+
+### Added
+
+- updating of ActionBar text via **checkout** function; if null is sent, the ActionBar will be hidden
+
 ## 2.1.0 - 2022-04-18
 
 ### Changed
