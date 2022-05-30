@@ -38,7 +38,7 @@
 
 # Balance Tap SDK for Android
 ***
-*Version:* 1.0.0
+*Version:* 1.0.2
 ***
 
 ### What is Balance Tap SDK?

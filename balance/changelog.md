@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.2 - 2022-05-30
+
+### Fixed
+
+- missing field crash
+
+## 1.0.1 - 2022-05-30
+
+### Fixed
+
+- missing **Account** and **Bank** classes
+
+
 ## 1.0.0 - 2022-05-27
 
 ### Added

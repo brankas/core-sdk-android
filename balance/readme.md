@@ -1,6 +1,6 @@
 # Balance Tap SDK for Android
 ***
-*Version:* 1.0.0
+*Version:* 1.0.2
 ***
 
 
@@ -59,11 +59,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:balance-tap:1.0.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:balance-tap:1.0.2"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:balance-tap:1.0.0"
+    	implementation "com.brankas.tap:balance-tap:1.0.2"
 	}
 
 
