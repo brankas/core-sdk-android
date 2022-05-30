@@ -1,22 +1,42 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 3.3.0
+*Version:* 3.4.0
 ***
 
 
 ## Table of Contents
 
-  1. [Minimum Requirements](#requirements)
-  2. [Installation](#installation)
-  3. [Initialization](#initialization)
-  4. [Usage](#usage)
+  1. [About SDK](#about-sdk)
+  2. [Minimum Requirements](#minimum-requirements)
+  3. [Installation](#installation)
+  4. [Initialization](#initialization)
+  5. [Usage](#usage)
 
 ***
 
+<a name="about-sdk">
+## About SDK
+</a>
+
+### What is Direct Tap SDK?
+- **Direct Tap SDK** is a development kit used to launch the interface for Tap Web Application via **Direct API** (Application Programming Interface). 
+- This kit helps mobile developers to integrate with Brankas Direct API Services with less setup needed and code implementation. 
+- With the embedded WebView that is provided within the SDK, users can perform logging in and bank transfers. 
+- The SDK also provides the **Transaction** object after bank transfer has been successful or has failed
+
+### Benefits of Using Direct Tap SDK
+- **No need to setup HTTPURLConnection or any similar third-party library.**<br/> Everything is already built within the SDK. Just call the appropriate functions and the needed data will be returned
+- **No need to create a WebView or launch an external Mobile Web Browser.**<br/>The SDK already provides an embedded WebView wherein built-in functions are done to detect successful or failed transactions
+- **The SDK provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WebView and create his own: the checkout URL can be used.<br/>The embedded WebView can be launched via another **Activity** or be embedded inside a **Fragment**
+- **The SDK provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The transaction object will be returned automatically after Tap Web Application Session
+- **The SDK provides greater speed.**<br/>The SDK uses gRPC (Remote Procedure Call) mechanism to communicate with the API Services faster. Using gRPC is roughly 7 times faster than REST (Representational State Transfer) when receiving data and roughly 10 times faster when sending data
+ 
+<a name="minimum-requirements">
 ## Minimum Requirements
+</a>
 
 1. **Android Studio 3.0** but preferably the latest version
-2. Minimum Android SDK: **API 17** or **Android 4.2**
+2. Minimum Android SDK: **API 21** or **Android 5.0**
 
 ## Installation
 
@@ -38,10 +58,10 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:3.3.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:3.4.0"** to set the SDK as a dependency for the application. This should look like:
 	````gradle
 	dependencies {
-    	implementation "com.brankas.tap:direct-tap:3.3.0"
+    	implementation "com.brankas.tap:direct-tap:3.4.0"
 	}
 	````
 
@@ -49,27 +69,26 @@ This set of instructions assumes that the IDE being used is Android Studio
 
 	```gradle
 	dependencies {
- 		implementation 'com.google.protobuf:protobuf-javalite:3.19.0-rc-1'
-    		implementation 'io.grpc:grpc-okhttp:1.41.0'
-    		implementation('io.grpc:grpc-protobuf-lite:1.41.0') {
+ 		implementation 'com.google.protobuf:protobuf-javalite:3.20.0'
+    		implementation 'io.grpc:grpc-okhttp:1.45.1'
+    		implementation('io.grpc:grpc-protobuf-lite:1.45.1') {
         			exclude group: 'com.google.protobuf'
     		}
-    		implementation 'io.grpc:grpc-stub:1.41.0'
-			implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    		implementation 'io.grpc:grpc-stub:1.45.1'
+			implementation 'io.reactivex.rxjava3:rxjava:3.0.6'
     		implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
 			//implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kotlin_coroutines_version"
-         		implementation "androidx.security:security-crypto:1.1.0-alpha03"
-        		implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2'
+			implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2'
 	}
 
 	compileOptions {
         		sourceCompatibility JavaVersion.VERSION_1_8
         		targetCompatibility JavaVersion.VERSION_1_8
-}
+    	}
 
-    kotlinOptions {
-        	jvmTarget = "1.8"
-    }
+    	kotlinOptions {
+        		jvmTarget = "1.8"
+    	}
 	```
 **NOTE: To mix coroutines and RxJava in the same project, include the optional dependency commented out**
 
@@ -96,7 +115,7 @@ plugins {
 
 	```java
 
-	import as.brank.sdk.tap.request.direct.DirectTapSDK;
+	import as.brank.sdk.tap.direct.DirectTapSDK;
 
 	DirectTapSDK.INSTANCE.initialize(context, apiKey, null, false);
 
@@ -106,7 +125,7 @@ plugins {
 
 	```kotlin
 
-	import `as`.brank.sdk.tap.request.direct.DirectTapSDK
+	import `as`.brank.sdk.tap.direct.DirectTapSDK
 
 	DirectTapSDK.initialize(context, apiKey, null, false)
 
@@ -117,9 +136,9 @@ plugins {
 
 ## Usage
 
-The SDK has a checkout function wherein it responds with a redirect url used to launch the Tap web application. An option is given either to use the url manually or let the SDK launch it through its internal WebView.
+The SDK has a checkout function wherein it responds with a redirect url used to launch the Tap web application. An option is given either to use the url manually (via **retrieveCheckoutURL()** function) or let the SDK launch it through its internal WebView.
 
-In order to use the checkout function, an **DirectTapRequest** is needed to be created and be passed. It has the following details:
+In order to use the checkout function, a **DirectTapRequest** is needed to be created and be passed. It has the following details:
 
 1. **sourceAccount** - the account to be used as a sender of money for bank transfer. It consists of **BankCode** (code for a specific bank) and **Country** (country of origin)
 <br/><br/>***NOTE:*** If **bankCode** is set to **null**, an internal bank selection screen will be shown inside Tap web application. If it has been filled up, that bank would automatically be selected instead.

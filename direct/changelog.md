@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.4.0 - 2022-05-27
+
+### Added
+- **isCorporate** field in **Bank**
+
+### Changed
+-  minimum SDK version from **17** to **21**
+-  sorted returned banks from **getSourceBanks()** function
+-  **rxjava** version from **3.0.0** to **3.0.6**
+-  **protobufjavalite** version from **3.19.0-rc-1** to **3.20.0**
+-  **gRPC** version from **1.41.0** to **1.45.1**
+
 ## 3.3.0 - 2022-04-27
 
 ### Added

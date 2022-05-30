@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.0.0 - 2022-05-27
+
+### Added
+
+- **initDownload()** function that is called in **onCreate()** function  to initialize and enable downloading of statement list in **CSV** format
+- **downloadStatements()** function to return the statement data in byte array and option to directly download Statement List to the mobile phone in **CSV** format
+- support for statement retrieval for Corporate Accounts
+- **isCorporate** field in **Bank**
+
+### Changed
+-  minimum SDK version from **17** to **21**
+-  sorted returned banks from **getEnabledBanks()** function
+-  automatic bank selection when only 1 bank code is passed via **bankCodes** within **StatementTapRequest**
+-  **rxjava** version from **3.0.0** to **3.0.6**
+-  **protobufjavalite** version from **3.19.0-rc-1** to **3.20.0**
+-  **gRPC** version from **1.41.0** to **1.45.1**
+
+### Fixed
+
+-  enabling of autoConsent within **StatementTapRequest**
+
+## 2.2.0 - 2022-04-27
+
+### Added
+
+- updating of ActionBar text via **checkout** function; if null is sent, the ActionBar will be hidden
+
 ## 2.2.0 - 2022-04-27
 
 ### Added

@@ -1,22 +1,43 @@
 # Statement Tap SDK for Android
 ***
-*Version:* 2.2.0
+*Version:* 3.0.0
 ***
 
 
 ## Table of Contents
-
-  1. [Minimum Requirements](#requirements)
-  2. [Installation](#installation)
-  3. [Initialization](#initialization)
-  4. [Usage](#usage)
+  1. [About SDK](#about-sdk)
+  2. [Minimum Requirements](#minimum-requirements)
+  3. [Installation](#installation)
+  4. [Initialization](#initialization)
+  5. [Usage](#usage)
+  6. [Statement List Download](#statement-list-download)
 
 ***
 
+<a name="about-sdk">
+## About SDK
+</a>
+
+### What is Statement Tap SDK?
+- **Statement Tap SDK** is a development kit used to launch the interface for Tap Web Application via **Statement API** (Application Programming Interface). 
+- This kit helps mobile developers to integrate with Brankas Statement API Services with less setup needed and code implementation. 
+- With the embedded WebView that is provided within the SDK, users can perform logging in and transaction history retrieval. 
+- The SDK also provides the **Transaction** list object after statement retrieval has been initiated
+- The SDK also gives an option to download the transaction history in CSV format
+
+### Benefits of Using Statement Tap SDK
+- **No need to setup HTTPURLConnection or any similar third-party library.**<br/> Everything is already built within the SDK. Just call the appropriate functions and the needed data will be returned
+- **No need to create a WebView or launch an external Mobile Web Browser.**<br/>The SDK already provides an embedded WebView wherein built-in functions are done to detect successful or failed transactions
+- **The SDK provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WebView and create his own: the checkout URL can be used.<br/>The embedded WebView can be launched via another **Activity** or be embedded inside a **Fragment**
+- **The SDK provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The transaction list object will be returned automatically after Tap Web Application Session
+- **The SDK provides greater speed.**<br/>The SDK uses gRPC (Remote Procedure Call) mechanism to communicate with the API Services faster. Using gRPC is roughly 7 times faster than REST (Representational State Transfer) when receiving data and roughly 10 times faster when sending data
+
+<a name="minimum-requirements">
 ## Minimum Requirements
+</a>
 
 1. **Android Studio 3.0** but preferably the latest version
-2. Minimum Android SDK: **API 17** or **Android 4.2**
+2. Minimum Android SDK: **API 21** or **Android 5.0**
 
 ## Installation
 
@@ -38,11 +59,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:2.2.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:3.0.0"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:statement-tap:2.2.0"
+    	implementation "com.brankas.tap:statement-tap:3.0.0"
 	}
 
 
@@ -50,13 +71,13 @@ This set of instructions assumes that the IDE being used is Android Studio
 
 	```gradle
 	dependencies {
- 		implementation 'com.google.protobuf:protobuf-javalite:3.19.0-rc-1'
-    		implementation 'io.grpc:grpc-okhttp:1.41.0'
-    		implementation('io.grpc:grpc-protobuf-lite:1.41.0') {
+ 		implementation 'com.google.protobuf:protobuf-javalite:3.20.0'
+    		implementation 'io.grpc:grpc-okhttp:1.45.1'
+    		implementation('io.grpc:grpc-protobuf-lite:1.45.1') {
         			exclude group: 'com.google.protobuf'
     		}
-    		implementation 'io.grpc:grpc-stub:1.41.0'
-			implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    		implementation 'io.grpc:grpc-stub:1.45.1'
+			implementation 'io.reactivex.rxjava3:rxjava:3.0.6'
     		implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
 			//implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kotlin_coroutines_version"
 			implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2'
@@ -92,11 +113,11 @@ plugins {
     
 ## Initialization
 
-1. Call the initialize function from the DirectTapSDK and pass the context and api key provided by Brankas.<br/><br/>**Java:**
+1. Call the initialize function from the StatementTapSDK and pass the context and api key provided by Brankas.<br/><br/>**Java:**
 
 	```java
 
-	import as.brank.sdk.tap.request.statement.StatementTapSDK;
+	import as.brank.sdk.tap.statement.StatementTapSDK;
 
 	StatementTapSDK.INSTANCE.initialize(context, apiKey, null, false);
 
@@ -106,7 +127,7 @@ plugins {
 
 	```kotlin
 
-	import `as`.brank.sdk.tap.request.statement.StatementTapSDK
+	import `as`.brank.sdk.tap.statement.StatementTapSDK
 
 	StatementTapSDK.initialize(context, apiKey, null, false)
 
@@ -117,9 +138,9 @@ plugins {
 
 ## Usage
 
-The SDK has a checkout function wherein it responds with a redirect url used to launch the Tap web application. An option is given either to use the url manually or let the SDK launch it through its internal WebView.
+The SDK has a checkout function wherein it responds with a redirect url used to launch the Tap web application. An option is given either to use the url manually (via **retrieveCheckoutURL()** function) or let the SDK launch it through its internal WebView.
 
-In order to use the checkout function, an **StatementTapRequest** is needed to be created and be passed. It has the following details:
+In order to use the checkout function, a **StatementTapRequest** is needed to be created and be passed. It has the following details:
 
 1. **country** - refers to the country of origin of the bank you wanted to do statement retrieval with. There are three countries currently supported: *Philippines (PH)*, *Indonesia (ID)* and *Thailand (TH)*
 
@@ -145,7 +166,7 @@ Here is a sample on how to use it and call:
 
 ```kotlin
 
-import `as`.brank.sdk.tap.request.statement.StatementTapSDK
+import `as`.brank.sdk.tap.statement.StatementTapSDK
 import `as`.brank.sdk.core.CoreError
 import `as`.brank.sdk.tap.CoreListener
 import tap.model.BankCode
@@ -189,7 +210,7 @@ StatementTapSDK.checkout(this, request.build(), object: CoreListener<String>() {
 
 ```java
 
-import as.brank.sdk.tap.request.statement.StatementTapSDK;
+import as.brank.sdk.tap.statement.StatementTapSDK;
 import as.brank.sdk.core.CoreError;
 import as.brank.sdk.tap.CoreListener;
 import tap.model.BankCode;
@@ -231,14 +252,80 @@ public void onActivityResult(int requestCode,int resultCode,Intent data){
 ```
 
 
-***NOTE:*** If **showInBrowser** is set to **true**, the transactionId will be returned if bank transfer is successful else it would be null. If it has been set to **false**, the redirect URL for the Tap Web Application will be returned after checkout has been successful.<br/><br/>
-If the internal WebView is opted not to be used (**showInBrowser** is **false**), **do not forget to call *terminate()* function to ensure previous Tap session is closed**
+***NOTE:***
 
 The **isAutoConsent** in the **checkout** function is set to false by default. To enable its usage, just set the 2nd to the last parameter to true
 
 The **useRememberMe** in the **checkout** function is set to false by default. To enable the usage of Remember Me inside the Tap Web Application, just pass false to the last parameter in the checkout function
 
 The **actionBarText** in the **checkout** function is set to null by default - thus, the ActionBar gets hidden. To show it, just pass a String to it
+
+<a name="statement-list-download">
+## Statement List Download
+</a>
+1. Call the **initDownload()** function inside the **onCreate()** function of the Activity
+<br/><br/> **Java:**
+
+	```java
+	import as.brank.sdk.tap.statement.StatementTapSDK;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		StatementTapSDK.INSTANCE.initDownload(this);
+	}
+
+	```
+
+	**Kotlin:**
+
+	```kotlin
+	import `as`.brank.sdk.tap.statement.StatementTapSDK
+
+	override fun onCreate(savedInstanceState: Bundle?) {
+		StatementTapSDK.initDownload(this)
+	}
+
+	```
+***NOTE:***  Call the **initDownload()** function in **onCreate() ONLY** to avoid any crash pertaining to register
+
+2. Call **downloadStatement()** function to initiate the downloading of the list of statements in CSV format. Remember to pass the **Statement ID** returned from the previous section [Usage](#usage)
+<br/><br/> **Java:**
+
+	```java
+
+	import as.brank.sdk.tap.statement.StatementTapSDK;
+	import as.brank.sdk.core.CoreError;
+	import as.brank.sdk.core.CoreListener;
+
+    StatementTapSDK.INSTANCE.downloadStatement(this, "STATEMENT_ID", new CoreListener<Pair<String, byte[]>>() {
+    	@Override
+    	public void onResult(Pair<String, byte[]> data, CoreError error) {
+    		if(data != null)
+            		System.out.println("STATEMENT PATH: "+data.getFirst());
+            }
+    }, true);
+
+	```
+
+	**Kotlin:**
+
+	```kotlin
+
+	import `as`.brank.sdk.tap.statement.StatementTapSDK
+	import `as`.brank.sdk.core.CoreError
+	import `as`.brank.sdk.core.CoreListener
+
+    StatementTapSDK.downloadStatement(this, "STATEMENT_ID", object: CoreListener<Pair<String?, ByteArray>> {
+    	override fun onResult(data: String?, error: CoreError?) {
+    		data?.let {
+    			println("STATEMENT PATH: "+data.first)	
+    		}
+            }
+    }, true)
+
+	```
+
+***NOTE:*** **data** returned in the **onResult()** function pertains to the directory or URI path where the file has been saved to and the statement data in byte array. Thus, if it is null, an **error** occurred. If **first** in pair is null, the file is not saved to any directory in the mobile phone. Also, there is an option to save the CSV or not; just update **enableSaving** parameter.
 
 
 

@@ -284,15 +284,15 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                         <tr id="i1" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> actionBarText) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#initDownload(AppCompatActivity)>initDownload</a>(<a href=https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html>AppCompatActivity</a> activity) </code>
                                             </th>
-                                            <td class="colLast">provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</td>
+                                            <td class="colLast">The function to be called on onCreate() before downloadStatement() can work</td>
                                         </tr>
                                         
                                         <tr id="i2" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#checkoutViaFragment(FragmentActivity,StatementTapRequest,CoreListener,String,Integer,Boolean,Boolean)>checkoutViaFragment</a>(<a href=https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html>FragmentActivity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> backArrowColor, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> viewId, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> actionBarText) </code>
                                             </th>
                                             <td class="colLast">provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</td>
                                         </tr>
@@ -300,12 +300,20 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                         <tr id="i3" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#checkoutViaFragment(FragmentActivity,StatementTapRequest,CoreListener,String,Integer,Boolean,Boolean)>checkoutViaFragment</a>(<a href=https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html>FragmentActivity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> backArrowColor, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> viewId, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe) </code>
+                                            </th>
+                                            <td class="colLast">provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</td>
+                                        </tr>
+                                        
+                                        <tr id="i4" class="altColor">
+                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
+                                            </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#retrieveCheckoutURL(Activity,StatementTapRequest,CoreListener)>retrieveCheckoutURL</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener) </code>
                                             </th>
                                             <td class="colLast">returns the checkout URL via listener to be manually launched by the calling Mobile application</td>
                                         </tr>
                                         
-                                        <tr id="i4" class="altColor">
+                                        <tr id="i5" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#clearRememberMe(Context)>clearRememberMe</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context) </code>
@@ -313,7 +321,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast">Clears the encrypted credential currently stored upon using Remember Me Function.</td>
                                         </tr>
                                         
-                                        <tr id="i5" class="rowColor">
+                                        <tr id="i6" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#cancelBrowserLaunch()>cancelBrowserLaunch</a>() </code>
@@ -321,7 +329,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast">cancels the showing of WebView after calling <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a></td>
                                         </tr>
                                         
-                                        <tr id="i6" class="altColor">
+                                        <tr id="i7" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getSDKVersion()>getSDKVersion</a>() </code>
@@ -329,7 +337,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast">provides the SDK Version</td>
                                         </tr>
                                         
-                                        <tr id="i7" class="rowColor">
+                                        <tr id="i8" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getSignature(SignatureAlgorithm)>getSignature</a>(<a href=../../core/SignatureAlgorithm.html>SignatureAlgorithm</a> format) </code>
@@ -337,7 +345,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast">provides the signature of the host mobile application</td>
                                         </tr>
                                         
-                                        <tr id="i8" class="altColor">
+                                        <tr id="i9" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getEnabledBanks(Country,CoreListener)>getEnabledBanks</a>(<a href=../../../../../tap/model/Country.html>Country</a> country, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../../../../../tap/model/statement/Bank.html>Bank</a>&gt;&gt; listener) </code>
@@ -345,7 +353,15 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast">returns all banks enabled for the specified country</td>
                                         </tr>
                                         
-                                        <tr id="i9" class="rowColor">
+                                        <tr id="i10" class="altColor">
+                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
+                                            </td>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#downloadStatement(ComponentActivity,String,CoreListener,Boolean)>downloadStatement</a>(<a href=https://developer.android.com/reference/kotlin/androidx/activity/ComponentActivity.html>ComponentActivity</a> activity, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> statementId, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html>Pair</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html>ByteArray</a>&gt;&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> enableSaving) </code>
+                                            </th>
+                                            <td class="colLast">downloads the statement list given a statement id</td>
+                                        </tr>
+                                        
+                                        <tr id="i11" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getSTATEMENT_ID()>getSTATEMENT_ID</a>() </code>
@@ -353,7 +369,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr id="i10" class="altColor">
+                                        <tr id="i12" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getSTATEMENTS()>getSTATEMENTS</a>() </code>
@@ -361,7 +377,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr id="i11" class="rowColor">
+                                        <tr id="i13" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getERROR()>getERROR</a>() </code>
@@ -369,7 +385,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr id="i12" class="altColor">
+                                        <tr id="i14" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getERROR_CODE()>getERROR_CODE</a>() </code>
@@ -377,7 +393,7 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr id="i13" class="rowColor">
+                                        <tr id="i15" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a></code>
                                             </td>
                                             <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getRESULT_ERROR()>getRESULT_ERROR</a>() </code>
@@ -455,6 +471,30 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             
                                             
                                             <dd><code>isDebug</code> - enables the usage of a Sandbox Environment; false for Production, true for Sandbox</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="initDownload(AppCompatActivity)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>initDownload</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#initDownload(AppCompatActivity)>initDownload</a>(<a href=https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html>AppCompatActivity</a> activity)</pre>
+                                        <div class="block"><p>The function to be called on onCreate() before downloadStatement() can work</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>activity</code> - the parent activity that is used to call the document launcher</dd>
                                             
                                             
                                         </dl>
@@ -678,6 +718,42 @@ public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementT
                                             
                                             
                                             <dd><code>listener</code> - callback that returns the list of available source banks</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="downloadStatement(ComponentActivity,String,CoreListener,Boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>downloadStatement</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#downloadStatement(ComponentActivity,String,CoreListener,Boolean)>downloadStatement</a>(<a href=https://developer.android.com/reference/kotlin/androidx/activity/ComponentActivity.html>ComponentActivity</a> activity, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> statementId, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html>Pair</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html>ByteArray</a>&gt;&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> enableSaving)</pre>
+                                        <div class="block"><p>downloads the statement list given a statement id</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>activity</code> - used to call the Document Tree Application to select the directory where PDF will be saved</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>statementId</code> - refers to the identifier assigned to the list of statements to be downloaded</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>listener</code> - callback that returns the directory where PDF has been saved and statement data in byte array.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>enableSaving</code> - enables saving of statement data in CSV Form via Storage Access Framework; default value is false.</dd>
                                             
                                             
                                         </dl>
