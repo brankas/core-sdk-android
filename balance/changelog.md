@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.1.0 - 2022-07-08
+
+### Added
+
+- support for balance retrieval for Corporate Accounts
+- **pngLogoUrl** field  within **Bank** for the logo in PNG format
+
+### Changed
+
+- automatic bank selection when only 1 bank code is passed via **bankCodes** within **BalanceTapRequest**
+
+### Fixed
+
+- closing of Tap Web Application when back button is pressed or Yes is clicked from **DismissalDialog**
+- crash when passing an unlisted **BankCode** gotten from **getEnabledBanks()** function to **checkout()** function
+
 ## 1.0.2 - 2022-05-30
 
 ### Fixed

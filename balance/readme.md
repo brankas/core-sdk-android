@@ -1,6 +1,6 @@
 # Balance Tap SDK for Android
 ***
-*Version:* 1.0.2
+*Version:* 1.1.0
 ***
 
 
@@ -19,17 +19,25 @@
 </a>
 
 ### What is Balance Tap SDK?
-- **Balance Tap SDK** is a development kit used to launch the interface for Tap Web Application via **Balance API** (Application Programming Interface). 
+- **Balance Tap SDK** is a development kit used to launch Tap Web Application inside an embedded WebView via **Balance API** (Application Programming Interface) for **Balance Retrieval**. 
 - This kit helps mobile developers to integrate with Brankas Balance API Services with less setup needed and code implementation. 
-- With the embedded WebView that is provided within the SDK, users can perform logging in and balance retrieval. 
+- The SDK provides the list of banks available for Balance Retrieval
 - The SDK also provides the **BalanceAccount** list object after balance retrieval has been successful or has failed
 
 ### Benefits of Using Balance Tap SDK
-- **No need to setup HTTPURLConnection or any similar third-party library.**<br/> Everything is already built within the SDK. Just call the appropriate functions and the needed data will be returned
-- **No need to create a WebView or launch an external Mobile Web Browser.**<br/>The SDK already provides an embedded WebView wherein built-in functions are done to detect successful or failed transactions
+- **The SDK provides everything that is needed**<br/> No need to setup HTTPURLConnection or any similar third-party library. Everything is already built within the SDK. Just call the appropriate functions and the needed data will be returned.
+- **The SDK provides User Interface**<br/>No need to create a WebView or launch an external Mobile Web Browser. The SDK already provides an embedded WebView wherein built-in functions are done to detect successful or failed transactions
 - **The SDK provides freedom and flexibility.**<br/>The developer has the option not to use the embedded WebView and create his own: the checkout URL can be used.<br/>The embedded WebView can be launched via another **Activity** or be embedded inside a **Fragment**
-- **The SDK provides convenience.**<br/>The needed API Services are called sequentially and polling of transactions is handled internally. The Balance Account List object will be returned automatically after Tap Web Application Session
+- **The SDK provides convenience.**<br/>The needed API Services are called sequentially and polling of retrieval is handled internally. The Balance Account List object will be returned automatically after Tap Web Application Session.
 - **The SDK provides greater speed.**<br/>The SDK uses gRPC (Remote Procedure Call) mechanism to communicate with the API Services faster. Using gRPC is roughly 7 times faster than REST (Representational State Transfer) when receiving data and roughly 10 times faster when sending data
+
+### How to Use 'Tap'?
+- Just follow these easy steps to perform **Balance Retrieval**
+1. Click **Continue** to accept terms and conditions regarding Privacy Policy in the Consent Page<br/><br/>![](screenshots/consent.png)<br/><br/>
+2. Select the desired bank in the Bank Selector Page and click **Continue**<br/><br/>![](screenshots/bank.png)<br/><br/>
+3. Enter the login credentials and click **Submit** <br/><br/>![](screenshots/login.png)<br/><br/>
+4. Enter the OTP (One-time Password) and click **Submit** <br/><br/>![](screenshots/otp.png)<br/><br/>
+5. Wait until the balance retrieval is finished. Success Page will be shown subsequently.<br/><br/>![](screenshots/success.png)<br/><br/>
 
 
 <a name="minimum-requirements">
@@ -59,11 +67,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:balance-tap:1.0.2"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:balance-tap:1.1.0"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:balance-tap:1.0.2"
+    	implementation "com.brankas.tap:balance-tap:1.1.0"
 	}
 
 

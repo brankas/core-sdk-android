@@ -19,7 +19,7 @@
 
 # Statement Tap SDK for Android
 ***
-*Version:* 3.0.0
+*Version:* 3.1.0
 ***
 
 ### What is Statement Tap SDK?
@@ -38,7 +38,7 @@
 
 # Balance Tap SDK for Android
 ***
-*Version:* 1.0.2
+*Version:* 1.1.0
 ***
 
 ### What is Balance Tap SDK?
