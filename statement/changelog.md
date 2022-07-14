@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.1.0 - 2022-07-08
+
+### Added
+
+- **pngLogoUrl** field  within **Bank** for the logo in PNG format
+
+### Fixed
+
+- crash when passing an unlisted **BankCode** gotten from **getEnabledBanks()** function to **checkout()** function
+
 ## 3.0.0 - 2022-05-27
 
 ### Added
