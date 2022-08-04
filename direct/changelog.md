@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.5.0 - 2022-07-25
+
+### Fixed
+
+- crash when passing an unlisted **BankCode** gotten from **getSourceBanks()** function to **checkout()** function
+- empty checkout URL when calling **retrieveCheckoutURL()** function
+
+### Added
+- **getTransactionById()** function to search for a transaction by passing the transaction id
+- **getTransactionByReferenceId()** function to search for a transaction by passing the reference id
+- **getLastTransaction()** function to retrieve the last transaction performed by the user  (internal only; thus, when user changes device or clears the cache, last transaction will not be returned)
+
 ## 3.4.0 - 2022-05-27
 
 ### Added

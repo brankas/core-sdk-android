@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <!-- NewPage -->
 <html lang="en"><head>
-    <title>DirectTapSDK </title>
+    <title>StatementTapSDK </title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="dc.created" content="2020-03-25">
     <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
@@ -89,7 +89,7 @@ var pathtoroot = "../../../../../";
 <main role="main">
     <div class="header">
         <div class="subTitle"><span class="packageLabelInType">Package</span>&nbsp;<a href="package-summary.html"></a></div>
-        <h2 title="Object DirectTapSDK" class="title">Object DirectTapSDK</h2>
+        <h2 title="Object StatementTapSDK" class="title">Object StatementTapSDK</h2>
     </div>
     <div class="contentContainer">
         <!-- <ul class="inheritance">
@@ -114,7 +114,7 @@ var pathtoroot = "../../../../../";
                     <hr>
                     <pre class="wrap-overflow">
 
-public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK</a></span>
+public class <span class="typeNameLabel"><a href=StatementTapSDK.html>StatementTapSDK</a></span>
 
                     </pre>
                     <div class="block"></div>
@@ -166,43 +166,37 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                         
                                         <tr class="altColor">
                                             <td class="colFirst"><code>private final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#TRANSACTION_ID>TRANSACTION_ID</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#STATEMENT_ID>STATEMENT_ID</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="rowColor">
                                             <td class="colFirst"><code>private final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#TRANSACTION>TRANSACTION</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#STATEMENTS>STATEMENTS</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="altColor">
                                             <td class="colFirst"><code>private final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#ENCRYPTED_CREDENTIALS>ENCRYPTED_CREDENTIALS</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#ERROR>ERROR</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="rowColor">
                                             <td class="colFirst"><code>private final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#ERROR>ERROR</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#ERROR_CODE>ERROR_CODE</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr class="altColor">
-                                            <td class="colFirst"><code>private final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#ERROR_CODE>ERROR_CODE</a></code></th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr class="rowColor">
                                             <td class="colFirst"><code>private final <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#RESULT_ERROR>RESULT_ERROR</a></code></th>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#RESULT_ERROR>RESULT_ERROR</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
-                                        <tr class="altColor">
-                                            <td class="colFirst"><code>public final static <a href=DirectTapSDK.html>DirectTapSDK</a></code></td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#INSTANCE>INSTANCE</a></code></th>
+                                        <tr class="rowColor">
+                                            <td class="colFirst"><code>public final static <a href=StatementTapSDK.html>StatementTapSDK</a></code></td>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#INSTANCE>INSTANCE</a></code></th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
@@ -282,159 +276,127 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                         <tr id="i0" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#initialize(Context,Integer,String,String)>initialize</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> port, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> clientName, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> certFilePath) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#initialize(Context,String,String,Boolean)>initialize</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> apiKey, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> certFilePath, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isDebug) </code>
                                             </th>
-                                            <td class="colLast">the first function to be called before calling any other function.</td>
+                                            <td class="colLast">The first function to be called before calling any other function.</td>
                                         </tr>
                                         
                                         <tr id="i1" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#initialize(Context,String,String,Boolean)>initialize</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> apiKey, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> certFilePath, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isDebug) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#initDownload(AppCompatActivity)>initDownload</a>(<a href=https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html>AppCompatActivity</a> activity) </code>
                                             </th>
-                                            <td class="colLast">The first function to be called before calling any other function.</td>
+                                            <td class="colLast">The function to be called on onCreate() before downloadStatement() can work</td>
                                         </tr>
                                         
                                         <tr id="i2" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#login(String,String,CoreListener)>login</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> clientId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> clientSecret, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> actionBarText) </code>
                                             </th>
-                                            <td class="colLast">used to do a log in inside the Direct Service</td>
+                                            <td class="colLast">provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</td>
                                         </tr>
                                         
                                         <tr id="i3" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#checkout(Activity,DirectTapRequest,CoreListener,Integer,Boolean,String)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/direct/DirectTapRequest.html>DirectTapRequest</a> directTapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> actionBarText) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#checkoutViaFragment(FragmentActivity,StatementTapRequest,CoreListener,String,Integer,Boolean,Boolean)>checkoutViaFragment</a>(<a href=https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html>FragmentActivity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> backArrowColor, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> viewId, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe) </code>
                                             </th>
-                                            <td class="colLast">launches the Tap Web Application via WebView within an activity</td>
+                                            <td class="colLast">provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</td>
                                         </tr>
                                         
                                         <tr id="i4" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#checkoutViaFragment(FragmentActivity,DirectTapRequest,CoreListener,String,Integer,Boolean)>checkoutViaFragment</a>(<a href=https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html>FragmentActivity</a> activity, <a href=../../../../../tap/request/direct/DirectTapRequest.html>DirectTapRequest</a> directTapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=../../../../../tap/model/direct/Transaction.html>Transaction</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> backArrowColor, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> viewId, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#retrieveCheckoutURL(Activity,StatementTapRequest,CoreListener)>retrieveCheckoutURL</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener) </code>
                                             </th>
-                                            <td class="colLast">launches the Tap Web Application via WebView within a fragment</td>
+                                            <td class="colLast">returns the checkout URL via listener to be manually launched by the calling Mobile application</td>
                                         </tr>
                                         
                                         <tr id="i5" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#retrieveCheckoutURL(DirectTapRequest,CoreListener)>retrieveCheckoutURL</a>(<a href=../../../../../tap/request/direct/DirectTapRequest.html>DirectTapRequest</a> directTapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#clearRememberMe(Context)>clearRememberMe</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context) </code>
                                             </th>
-                                            <td class="colLast">returns the checkout URL via listener to be manually launched by the calling Mobile application</td>
+                                            <td class="colLast">Clears the encrypted credential currently stored upon using Remember Me Function.</td>
                                         </tr>
                                         
                                         <tr id="i6" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getSourceBanks(Country,BankCode,CoreListener)>getSourceBanks</a>(<a href=../../../../../tap/model/Country.html>Country</a> country, <a href=../../../../../tap/model/BankCode.html>BankCode</a> destinationBank, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../../../../../tap/model/direct/Bank.html>Bank</a>&gt;&gt; listener) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#cancelBrowserLaunch()>cancelBrowserLaunch</a>() </code>
                                             </th>
-                                            <td class="colLast">returns all the available source banks for the specified destination bank</td>
+                                            <td class="colLast">cancels the showing of WebView after calling <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a></td>
                                         </tr>
                                         
                                         <tr id="i7" class="rowColor">
-                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
+                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getTransactionById(String,CoreListener)>getTransactionById</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> transactionId, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=../../../../../tap/model/direct/Transaction.html>Transaction</a>&gt; listener) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getSDKVersion()>getSDKVersion</a>() </code>
                                             </th>
-                                            <td class="colLast">returns the transaction given its id</td>
+                                            <td class="colLast">provides the SDK Version</td>
                                         </tr>
                                         
                                         <tr id="i8" class="altColor">
-                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
+                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getTransactionByReferenceId(String,CoreListener)>getTransactionByReferenceId</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> referenceId, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=../../../../../tap/model/direct/Transaction.html>Transaction</a>&gt; listener) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getSignature(SignatureAlgorithm)>getSignature</a>(<a href=../../core/SignatureAlgorithm.html>SignatureAlgorithm</a> format) </code>
                                             </th>
-                                            <td class="colLast">returns the transaction given its reference id</td>
+                                            <td class="colLast">provides the signature of the host mobile application</td>
                                         </tr>
                                         
                                         <tr id="i9" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getLastTransaction(CoreListener)>getLastTransaction</a>(<a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=../../../../../tap/model/direct/Transaction.html>Transaction</a>&gt; listener) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getEnabledBanks(Country,CoreListener)>getEnabledBanks</a>(<a href=../../../../../tap/model/Country.html>Country</a> country, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../../../../../tap/model/statement/Bank.html>Bank</a>&gt;&gt; listener) </code>
                                             </th>
-                                            <td class="colLast">returns the last transaction created via checkout function</td>
+                                            <td class="colLast">returns all banks enabled for the specified country</td>
                                         </tr>
                                         
                                         <tr id="i10" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#clearRememberMe(Context)>clearRememberMe</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#downloadStatement(ComponentActivity,String,CoreListener,Boolean)>downloadStatement</a>(<a href=https://developer.android.com/reference/kotlin/androidx/activity/ComponentActivity.html>ComponentActivity</a> activity, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> statementId, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html>Pair</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html>ByteArray</a>&gt;&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> enableSaving) </code>
                                             </th>
-                                            <td class="colLast">Clears the encrypted credential currently stored upon using Remember Me Function</td>
+                                            <td class="colLast">downloads the statement list given a statement id</td>
                                         </tr>
                                         
                                         <tr id="i11" class="rowColor">
-                                            <td class="colFirst"><code>final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a></code>
+                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#cancelBrowserLaunch()>cancelBrowserLaunch</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getSTATEMENT_ID()>getSTATEMENT_ID</a>() </code>
                                             </th>
-                                            <td class="colLast">cancels the showing of WebView after calling <a href=DirectTapSDK.html#checkout(Activity,DirectTapRequest,CoreListener,Integer,Boolean,String)>checkout</a></td>
+                                            <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr id="i12" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getSDKVersion()>getSDKVersion</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getSTATEMENTS()>getSTATEMENTS</a>() </code>
                                             </th>
-                                            <td class="colLast">provides the SDK Version</td>
+                                            <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr id="i13" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getSignature(SignatureAlgorithm)>getSignature</a>(<a href=../../core/SignatureAlgorithm.html>SignatureAlgorithm</a> format) </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getERROR()>getERROR</a>() </code>
                                             </th>
-                                            <td class="colLast">provides the signature of the host mobile application</td>
+                                            <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr id="i14" class="altColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getTRANSACTION_ID()>getTRANSACTION_ID</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getERROR_CODE()>getERROR_CODE</a>() </code>
                                             </th>
                                             <td class="colLast"></td>
                                         </tr>
                                         
                                         <tr id="i15" class="rowColor">
-                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getTRANSACTION()>getTRANSACTION</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i16" class="altColor">
-                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getENCRYPTED_CREDENTIALS()>getENCRYPTED_CREDENTIALS</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i17" class="rowColor">
-                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getERROR()>getERROR</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i18" class="altColor">
-                                            <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a></code>
-                                            </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getERROR_CODE()>getERROR_CODE</a>() </code>
-                                            </th>
-                                            <td class="colLast"></td>
-                                        </tr>
-                                        
-                                        <tr id="i19" class="rowColor">
                                             <td class="colFirst"><code>final <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a></code>
                                             </td>
-                                            <th class="colSecond" scope="row"><code><a href=DirectTapSDK.html#getRESULT_ERROR()>getRESULT_ERROR</a>() </code>
+                                            <th class="colSecond" scope="row"><code><a href=StatementTapSDK.html#getRESULT_ERROR()>getRESULT_ERROR</a>() </code>
                                             </th>
                                             <td class="colLast"></td>
                                         </tr>
@@ -483,40 +445,6 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                             </a>
                                 <h3>Method Detail</h3>
                                 
-                                <a id="initialize(Context,Integer,String,String)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>initialize</h4>
-                                        <pre class="methodSignature">@<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-deprecated/index.html>Deprecated</a>(message = "use initialize function with API Key", replaceWith = @<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-replace-with/index.html>ReplaceWith</a>(imports = {}, expression = "initialize(context: Context, apiKey: String, certFilePath: String? = null, isDebug: Boolean = false)")) final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#initialize(Context,Integer,String,String)>initialize</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> port, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> clientName, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> certFilePath)</pre>
-                                        <div class="block"><p>the first function to be called before calling any other function. This function is used to initialize or prepare the environment that the user is going to connect to.</p></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            
-                                            
-                                            <dd><code>port</code> - port to be connected to (usually 443)</dd>
-                                            
-                                            
-                                            
-                                            <dd><code>clientName</code> - client name provided by Brankas</dd>
-                                            
-                                            
-                                            
-                                            <dd><code>certFilePath</code> - directory to fake certificate to be used to bypass SSL</dd>
-                                            
-                                            
-                                        </dl>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
                                 <a id="initialize(Context,String,String,Boolean)">
                                     <!--   -->
                                 </a>
@@ -525,7 +453,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>initialize</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#initialize(Context,String,String,Boolean)>initialize</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> apiKey, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> certFilePath, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isDebug)</pre>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#initialize(Context,String,String,Boolean)>initialize</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> apiKey, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> certFilePath, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isDebug)</pre>
                                         <div class="block"><p>The first function to be called before calling any other function. This function is used to initialize or prepare the environment that the user is going to connect to.</p></div>
                                         
                                         <dl>
@@ -551,30 +479,22 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                     </li>
                                 </ul>
                                 
-                                <a id="login(String,String,CoreListener)">
+                                <a id="initDownload(AppCompatActivity)">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>login</h4>
-                                        <pre class="methodSignature">@<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-deprecated/index.html>Deprecated</a>(message = "use this method only when Brankas provided a client name instead of an API Key") final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#login(String,String,CoreListener)>login</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> clientId, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> clientSecret, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener)</pre>
-                                        <div class="block"><p>used to do a log in inside the Direct Service</p></div>
+                                        <h4>initDownload</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#initDownload(AppCompatActivity)>initDownload</a>(<a href=https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity.html>AppCompatActivity</a> activity)</pre>
+                                        <div class="block"><p>The function to be called on onCreate() before downloadStatement() can work</p></div>
                                         
                                         <dl>
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
-                                            <dd><code>clientId</code> - ID provided by Brankas</dd>
-                                            
-                                            
-                                            
-                                            <dd><code>clientSecret</code> - secret provided by Brankas</dd>
-                                            
-                                            
-                                            
-                                            <dd><code>listener</code> - callback to inform successful or failed login</dd>
+                                            <dd><code>activity</code> - the parent activity that is used to call the document launcher</dd>
                                             
                                             
                                         </dl>
@@ -583,7 +503,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                     </li>
                                 </ul>
                                 
-                                <a id="checkout(Activity,DirectTapRequest,CoreListener,Integer,Boolean,String)">
+                                <a id="checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)">
                                     <!--   -->
                                 </a>
                                 <ul class=
@@ -591,8 +511,8 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>checkout</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#checkout(Activity,DirectTapRequest,CoreListener,Integer,Boolean,String)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/direct/DirectTapRequest.html>DirectTapRequest</a> directTapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> actionBarText)</pre>
-                                        <div class="block"><p>launches the Tap Web Application via WebView within an activity</p></div>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> requestCode, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> actionBarText)</pre>
+                                        <div class="block"><p>provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</p></div>
                                         
                                         <dl>
                                             <dt><span class="paramLabel">Parameters:</span></dt>
@@ -602,11 +522,11 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                             
                                             
                                             
-                                            <dd><code>directTapRequest</code> - contains request to the Tap Web Application</dd>
+                                            <dd><code>tapRequest</code> - contains request to the Tap Web Application</dd>
                                             
                                             
                                             
-                                            <dd><code>listener</code> - callback that is only called if checkout URL generation has failed; if successful, check the transaction from onActivityResult</dd>
+                                            <dd><code>listener</code> - optional callback to inform successful or failed transaction</dd>
                                             
                                             
                                             
@@ -614,7 +534,11 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                             
                                             
                                             
-                                            <dd><code>useRememberMe</code> - option to use remember me function (default value is true)</dd>
+                                            <dd><code>isAutoConsent</code> - option to use auto consent function (default value is false)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>useRememberMe</code> - option to use Remember Me function (default value is false)</dd>
                                             
                                             
                                             
@@ -627,7 +551,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                     </li>
                                 </ul>
                                 
-                                <a id="checkoutViaFragment(FragmentActivity,DirectTapRequest,CoreListener,String,Integer,Boolean)">
+                                <a id="checkoutViaFragment(FragmentActivity,StatementTapRequest,CoreListener,String,Integer,Boolean,Boolean)">
                                     <!--   -->
                                 </a>
                                 <ul class=
@@ -635,8 +559,8 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>checkoutViaFragment</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#checkoutViaFragment(FragmentActivity,DirectTapRequest,CoreListener,String,Integer,Boolean)>checkoutViaFragment</a>(<a href=https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html>FragmentActivity</a> activity, <a href=../../../../../tap/request/direct/DirectTapRequest.html>DirectTapRequest</a> directTapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=../../../../../tap/model/direct/Transaction.html>Transaction</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> backArrowColor, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> viewId, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe)</pre>
-                                        <div class="block"><p>launches the Tap Web Application via WebView within a fragment</p></div>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#checkoutViaFragment(FragmentActivity,StatementTapRequest,CoreListener,String,Integer,Boolean,Boolean)>checkoutViaFragment</a>(<a href=https://developer.android.com/reference/kotlin/androidx/fragment/app/FragmentActivity.html>FragmentActivity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/Object.html>Object</a>&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> backArrowColor, <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> viewId, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> isAutoConsent, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> useRememberMe)</pre>
+                                        <div class="block"><p>provides the checkout URL to be used to open the Tap Web Application; this function may provide the WebView as well in behalf of the user</p></div>
                                         
                                         <dl>
                                             <dt><span class="paramLabel">Parameters:</span></dt>
@@ -646,7 +570,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                             
                                             
                                             
-                                            <dd><code>directTapRequest</code> - contains request to the Tap Web Application</dd>
+                                            <dd><code>tapRequest</code> - contains request to the Tap Web Application</dd>
                                             
                                             
                                             
@@ -662,7 +586,11 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                             
                                             
                                             
-                                            <dd><code>useRememberMe</code> - option to use remember me function (default value is true)</dd>
+                                            <dd><code>isAutoConsent</code> - option to use auto consent function inside Tap Web Application (default value is false)</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>useRememberMe</code> - option to use Remember Me function (default value is false)</dd>
                                             
                                             
                                         </dl>
@@ -671,7 +599,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                     </li>
                                 </ul>
                                 
-                                <a id="retrieveCheckoutURL(DirectTapRequest,CoreListener)">
+                                <a id="retrieveCheckoutURL(Activity,StatementTapRequest,CoreListener)">
                                     <!--   -->
                                 </a>
                                 <ul class=
@@ -679,130 +607,20 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>retrieveCheckoutURL</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#retrieveCheckoutURL(DirectTapRequest,CoreListener)>retrieveCheckoutURL</a>(<a href=../../../../../tap/request/direct/DirectTapRequest.html>DirectTapRequest</a> directTapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener)</pre>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#retrieveCheckoutURL(Activity,StatementTapRequest,CoreListener)>retrieveCheckoutURL</a>(<a href=https://developer.android.com/reference/kotlin/android/app/Activity.html>Activity</a> activity, <a href=../../../../../tap/request/statement/StatementTapRequest.html>StatementTapRequest</a> tapRequest, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>&gt; listener)</pre>
                                         <div class="block"><p>returns the checkout URL via listener to be manually launched by the calling Mobile application</p></div>
                                         
                                         <dl>
                                             <dt><span class="paramLabel">Parameters:</span></dt>
                                             
                                             
-                                            <dd><code>directTapRequest</code> - contains request to the Tap Web Application</dd>
+                                            
+                                            
+                                            <dd><code>tapRequest</code> - contains request to the Tap Web Application</dd>
                                             
                                             
                                             
                                             <dd><code>listener</code> - callback that returns the checkout URL</dd>
-                                            
-                                            
-                                        </dl>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getSourceBanks(Country,BankCode,CoreListener)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getSourceBanks</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#getSourceBanks(Country,BankCode,CoreListener)>getSourceBanks</a>(<a href=../../../../../tap/model/Country.html>Country</a> country, <a href=../../../../../tap/model/BankCode.html>BankCode</a> destinationBank, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../../../../../tap/model/direct/Bank.html>Bank</a>&gt;&gt; listener)</pre>
-                                        <div class="block"><p>returns all the available source banks for the specified destination bank</p></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>country</code> - refers to the country of origin of the destination bank</dd>
-                                            
-                                            
-                                            
-                                            <dd><code>destinationBank</code> - refers to the bank code assigned by Brankas to the destination bank</dd>
-                                            
-                                            
-                                            
-                                            <dd><code>listener</code> - callback that returns the list of available source banks</dd>
-                                            
-                                            
-                                        </dl>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getTransactionById(String,CoreListener)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getTransactionById</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#getTransactionById(String,CoreListener)>getTransactionById</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> transactionId, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=../../../../../tap/model/direct/Transaction.html>Transaction</a>&gt; listener)</pre>
-                                        <div class="block"><p>returns the transaction given its id</p></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>transactionId</code> - refers to the identifier assigned to the transaction and used for searching</dd>
-                                            
-                                            
-                                            
-                                            <dd><code>listener</code> - callback that returns the transaction if ever found</dd>
-                                            
-                                            
-                                        </dl>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getTransactionByReferenceId(String,CoreListener)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getTransactionByReferenceId</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#getTransactionByReferenceId(String,CoreListener)>getTransactionByReferenceId</a>(<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> referenceId, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=../../../../../tap/model/direct/Transaction.html>Transaction</a>&gt; listener)</pre>
-                                        <div class="block"><p>returns the transaction given its reference id</p></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>referenceId</code> - refers to the identifier sent via checkout function and used for searching</dd>
-                                            
-                                            
-                                            
-                                            <dd><code>listener</code> - callback that returns the transaction if ever found</dd>
-                                            
-                                            
-                                        </dl>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getLastTransaction(CoreListener)">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getLastTransaction</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#getLastTransaction(CoreListener)>getLastTransaction</a>(<a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=../../../../../tap/model/direct/Transaction.html>Transaction</a>&gt; listener)</pre>
-                                        <div class="block"><p>returns the last transaction created via checkout function</p></div>
-                                        
-                                        <dl>
-                                            <dt><span class="paramLabel">Parameters:</span></dt>
-                                            
-                                            
-                                            <dd><code>listener</code> - callback that returns the transaction if ever available</dd>
                                             
                                             
                                         </dl>
@@ -819,8 +637,8 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>clearRememberMe</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#clearRememberMe(Context)>clearRememberMe</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context)</pre>
-                                        <div class="block"><p>Clears the encrypted credential currently stored upon using Remember Me Function</p></div>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#clearRememberMe(Context)>clearRememberMe</a>(<a href=https://developer.android.com/reference/kotlin/android/content/Context.html>Context</a> context)</pre>
+                                        <div class="block"><p>Clears the encrypted credential currently stored upon using Remember Me Function. Call this before using checkout.</p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -834,8 +652,8 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>cancelBrowserLaunch</h4>
-                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=DirectTapSDK.html#cancelBrowserLaunch()>cancelBrowserLaunch</a>()</pre>
-                                        <div class="block"><p>cancels the showing of WebView after calling <a href=DirectTapSDK.html#checkout(Activity,DirectTapRequest,CoreListener,Integer,Boolean,String)>checkout</a></p></div>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#cancelBrowserLaunch()>cancelBrowserLaunch</a>()</pre>
+                                        <div class="block"><p>cancels the showing of WebView after calling <a href=StatementTapSDK.html#checkout(Activity,StatementTapRequest,CoreListener,Integer,Boolean,Boolean,String)>checkout</a></p></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
@@ -849,7 +667,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>getSDKVersion</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=DirectTapSDK.html#getSDKVersion()>getSDKVersion</a>()</pre>
+                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=StatementTapSDK.html#getSDKVersion()>getSDKVersion</a>()</pre>
                                         <div class="block"><p>provides the SDK Version</p></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -864,7 +682,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>getSignature</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=DirectTapSDK.html#getSignature(SignatureAlgorithm)>getSignature</a>(<a href=../../core/SignatureAlgorithm.html>SignatureAlgorithm</a> format)</pre>
+                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=StatementTapSDK.html#getSignature(SignatureAlgorithm)>getSignature</a>(<a href=../../core/SignatureAlgorithm.html>SignatureAlgorithm</a> format)</pre>
                                         <div class="block"><p>provides the signature of the host mobile application</p></div>
                                         
                                         <dl>
@@ -880,45 +698,94 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                     </li>
                                 </ul>
                                 
-                                <a id="getTRANSACTION_ID()">
+                                <a id="getEnabledBanks(Country,CoreListener)">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getTRANSACTION_ID</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=DirectTapSDK.html#getTRANSACTION_ID()>getTRANSACTION_ID</a>()</pre>
+                                        <h4>getEnabledBanks</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#getEnabledBanks(Country,CoreListener)>getEnabledBanks</a>(<a href=../../../../../tap/model/Country.html>Country</a> country, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/util/List.html>List</a>&lt;<a href=../../../../../tap/model/statement/Bank.html>Bank</a>&gt;&gt; listener)</pre>
+                                        <div class="block"><p>returns all banks enabled for the specified country</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>country</code> - refers to the country</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>listener</code> - callback that returns the list of available source banks</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="downloadStatement(ComponentActivity,String,CoreListener,Boolean)">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>downloadStatement</h4>
+                                        <pre class="methodSignature"> final <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html>Unit</a> <a href=StatementTapSDK.html#downloadStatement(ComponentActivity,String,CoreListener,Boolean)>downloadStatement</a>(<a href=https://developer.android.com/reference/kotlin/androidx/activity/ComponentActivity.html>ComponentActivity</a> activity, <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> statementId, <a href=../../core/CoreListener.html>CoreListener</a>&lt;<a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html>Pair</a>&lt;<a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a>, <a href=https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html>ByteArray</a>&gt;&gt; listener, <a href=https://developer.android.com/reference/kotlin/java/lang/Boolean.html>Boolean</a> enableSaving)</pre>
+                                        <div class="block"><p>downloads the statement list given a statement id</p></div>
+                                        
+                                        <dl>
+                                            <dt><span class="paramLabel">Parameters:</span></dt>
+                                            
+                                            
+                                            <dd><code>activity</code> - used to call the Document Tree Application to select the directory where PDF will be saved</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>statementId</code> - refers to the identifier assigned to the list of statements to be downloaded</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>listener</code> - callback that returns the directory where PDF has been saved and statement data in byte array.</dd>
+                                            
+                                            
+                                            
+                                            <dd><code>enableSaving</code> - enables saving of statement data in CSV Form via Storage Access Framework; default value is false.</dd>
+                                            
+                                            
+                                        </dl>
+                                        
+                                        <!-- TODO missing return annotation -->
+                                    </li>
+                                </ul>
+                                
+                                <a id="getSTATEMENT_ID()">
+                                    <!--   -->
+                                </a>
+                                <ul class=
+                                              "blockList"
+                                          >
+                                    <li class="blockList">
+                                        <h4>getSTATEMENT_ID</h4>
+                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=StatementTapSDK.html#getSTATEMENT_ID()>getSTATEMENT_ID</a>()</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
                                     </li>
                                 </ul>
                                 
-                                <a id="getTRANSACTION()">
+                                <a id="getSTATEMENTS()">
                                     <!--   -->
                                 </a>
                                 <ul class=
                                               "blockList"
                                           >
                                     <li class="blockList">
-                                        <h4>getTRANSACTION</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=DirectTapSDK.html#getTRANSACTION()>getTRANSACTION</a>()</pre>
-                                        <div class="block"></div>
-                                        
-                                        <!-- TODO missing return annotation -->
-                                    </li>
-                                </ul>
-                                
-                                <a id="getENCRYPTED_CREDENTIALS()">
-                                    <!--   -->
-                                </a>
-                                <ul class=
-                                              "blockList"
-                                          >
-                                    <li class="blockList">
-                                        <h4>getENCRYPTED_CREDENTIALS</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=DirectTapSDK.html#getENCRYPTED_CREDENTIALS()>getENCRYPTED_CREDENTIALS</a>()</pre>
+                                        <h4>getSTATEMENTS</h4>
+                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=StatementTapSDK.html#getSTATEMENTS()>getSTATEMENTS</a>()</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -933,7 +800,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>getERROR</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=DirectTapSDK.html#getERROR()>getERROR</a>()</pre>
+                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=StatementTapSDK.html#getERROR()>getERROR</a>()</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -948,7 +815,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>getERROR_CODE</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=DirectTapSDK.html#getERROR_CODE()>getERROR_CODE</a>()</pre>
+                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/String.html>String</a> <a href=StatementTapSDK.html#getERROR_CODE()>getERROR_CODE</a>()</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
@@ -963,7 +830,7 @@ public class <span class="typeNameLabel"><a href=DirectTapSDK.html>DirectTapSDK<
                                           >
                                     <li class="blockList">
                                         <h4>getRESULT_ERROR</h4>
-                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> <a href=DirectTapSDK.html#getRESULT_ERROR()>getRESULT_ERROR</a>()</pre>
+                                        <pre class="methodSignature"> final <a href=https://developer.android.com/reference/kotlin/java/lang/Integer.html>Integer</a> <a href=StatementTapSDK.html#getRESULT_ERROR()>getRESULT_ERROR</a>()</pre>
                                         <div class="block"></div>
                                         
                                         <!-- TODO missing return annotation -->
