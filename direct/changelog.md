@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.5.1 - 2022-08-29
+
+### Fixed
+
+- crash when passing an unknown **BankCode** to **checkout()** function
+- crash when a new **BankCode** is added from **getSourceBanks()** function 
+
+### Changed
+
+- prohibited manual creation of **BankCode**
+
 ## 3.5.0 - 2022-07-25
 
 ### Fixed
