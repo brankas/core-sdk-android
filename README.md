@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 3.5.0
+*Version:* 3.5.1
 ***
 
 ### What is Direct Tap SDK?
@@ -19,7 +19,7 @@
 
 # Statement Tap SDK for Android
 ***
-*Version:* 3.1.0
+*Version:* 3.1.1
 ***
 
 ### What is Statement Tap SDK?
@@ -38,7 +38,7 @@
 
 # Balance Tap SDK for Android
 ***
-*Version:* 1.1.0
+*Version:* 1.1.1
 ***
 
 ### What is Balance Tap SDK?
