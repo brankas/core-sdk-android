@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.1.2 - 2022-10-12
+
+### Fixed
+
+- crash in Fragment Implementation (Can not perform this action after onSaveInstanceState)
+
 ## 3.1.1 - 2022-08-29
 
 ### Fixed
