@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 3.5.2 - 2022-10-21
+
+### Fixed
+
+- crash when a new Destination **BankCode** is added from **getSourceBanks()** function  
+- crash Application attempted to call on a destroyed WebView for some Android devices
+
+### Added
+
+- added **isEnabled** field in **Bank** to determine if bank is enabled or not as a source bank for bank transfer
+
 ## 3.5.1 - 2022-08-29
 
 ### Fixed
