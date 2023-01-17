@@ -2,6 +2,7 @@ $dokka.format:javadoc-v1
 $dokka.linkExtension:html
 $dokka.location:as.brank.sdk.core.direct/DirectErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/direct/DirectErrorCode.Companion.html
 $dokka.location:as.brank.sdk.core/CoreErrorCode.Companion///PointingToDeclaration/as/brank/sdk/core/CoreErrorCode.Companion.html
+$dokka.location:tap.model.direct/Language.Companion///PointingToDeclaration/tap/model/direct/Language.Companion.html
 $dokka.location:tap.model.direct/Status.Companion///PointingToDeclaration/tap/model/direct/Status.Companion.html
 $dokka.location:tap.model/BankCode.Companion///PointingToDeclaration/tap/model/BankCode.Companion.html
 $dokka.location:tap.model/Country.Companion///PointingToDeclaration/tap/model/Country.Companion.html

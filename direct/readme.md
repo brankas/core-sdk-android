@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 3.5.2
+*Version:* 4.0.0
 ***
 
 
@@ -11,6 +11,7 @@
   3. [Installation](#installation)
   4. [Initialization](#initialization)
   5. [Usage](#usage)
+  6. [App Tracking and Privacy Changes](#app-tracking-privacy) 
 
 ***
 
@@ -69,10 +70,10 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:3.5.2"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:4.0.0"** to set the SDK as a dependency for the application. This should look like:
 	````gradle
 	dependencies {
-    	implementation "com.brankas.tap:direct-tap:3.5.2"
+    	implementation "com.brankas.tap:direct-tap:4.0.0"
 	}
 	````
 
@@ -164,7 +165,7 @@ In order to use the checkout function, a **DirectTapRequest** is needed to be cr
 
 6. **referenceId**
 
-7. **client** - pertains to the customizations in the Tap Web Application and callback url once bank transfer is finished. It consists of **displayName** (name in the header to be shown in the Tap Web Application), **logoUrl** (URL of the logo to be shown), **returnUrl** (URL where Tap would be redirecting after bank transfer is finished), **failUrl** (optional URL where Tap would be redirecting if bank transfer has failed), **statementRetrieval** (optional Boolean that shows the list of statements after bank transfer is finished; its default value is false)
+7. **client** - pertains to the customizations in the Tap Web Application and callback url once bank transfer is finished. It consists of **displayName** (name in the header to be shown in the Tap Web Application), **logoUrl** (URL of the logo to be shown), **returnUrl** (URL where Tap would be redirecting after bank transfer is finished), **failUrl** (optional URL where Tap would be redirecting if bank transfer has failed), **statementRetrieval** (optional Boolean that shows the list of statements after bank transfer is finished; its default value is false), **language** (optional enum that changes the language being used within Tap Web App)
 
 8. **dismissalDialog** - pertains to the showing of alert dialog when closing the WebView. It consists of **message**, **positiveButtonText** and **negativeButtonText**. Just set this value to null to remove the alert dialog when closing the application.
 
@@ -178,7 +179,7 @@ Here is a sample on how to use it and call:
 ```java
 import as.brank.sdk.core.CoreError;
 import as.brank.sdk.tap.CoreListener;
-import as.brank.sdk.tap.request.direct.DirectTapSDK;
+import as.brank.sdk.tap.direct.DirectTapSDK;
 import tap.model.direct.*;
 import tap.model.Currency;
 import tap.request.direct.DirectTapRequest;
@@ -199,27 +200,27 @@ DirectTapSDK.INSTANCE.checkout(activity,
         .client(new Client("Sample Client",null,"www.google.com"))
         .referenceId("sample-reference").build(),
         new CoreListener<String> {
-@Override
-public void onResult(@Nullable String str,@Nullable CoreError coreError){
-        if(coreError!=null)
-        System.out.println("Error: "+coreError.getErrorMessage());
-        }
-        },1000);
+		@Override
+		public void onResult(@Nullable String str,@Nullable CoreError coreError){
+        		if(coreError!=null)
+        			System.out.println("Error: "+coreError.getErrorMessage());
+        	}
+        }, 1000);
 
 // Used to retrieve the result from Tap Web Application
 @Override
-	void onActivityResult(int requestCode,int resultCode,Intent data){
-            super.onActivityResult(requestCode,resultCode,data);
+void onActivityResult(int requestCode,int resultCode,Intent data){
+	super.onActivityResult(requestCode,resultCode,data);
 
-            if(requestCode==1000){
-            // Transaction is successful
-            if(resultCode==RESULT_OK){
-            // Retrieve transaction
-            Transaction transaction=data.getParcelableExtra<Reference<Transaction>>(DirectTapSDK.TRANSACTION).get();
-        Systemout.println("TRANSACTION ID: "+transaction.getId());
+     	if(requestCode==1000){
+            	// Transaction is successful
+            	if(resultCode==RESULT_OK){
+            		// Retrieve transaction
+            		Transaction transaction = data.getParcelableExtra<Reference<Transaction>>(DirectTapSDK.TRANSACTION).get();
+        		System.out.println("TRANSACTION ID: "+transaction.getId());
+        	}
         }
-        }
-        }
+}
 ````
 
 <br/><br/> **Kotlin:**
@@ -227,7 +228,7 @@ public void onResult(@Nullable String str,@Nullable CoreError coreError){
 ```kotlin
 import `as`.brank.sdk.core.CoreError
 import `as`.brank.sdk.tap.CoreListener
-import `as`.brank.sdk.tap.request.direct.DirectTapSDK
+import `as`.brank.sdk.tap.direct.DirectTapSDK
 import tap.model.direct.*;
 import tap.model.Currency;
 import tap.request.direct.DirectTapRequest;
@@ -273,4 +274,31 @@ DirectTapSDK.checkout(activity,
 The **actionBarText** in the **checkout** function is set to null by default - thus, the ActionBar gets hidden. To show it, just pass a String to it
 
 
+<a name="app-tracking-privacy">
+## App Tracking and Privacy Changes
+</a>
 
+### What is added?
+
+Starting v4.0 of Direct Tap SDK, a new feature has been added internally - **logging of Tap Web Flow**. This feature helps Brankas to track the flow of a transaction while performing a **Fund Transfer** within Tap Web App. This will aid in pointing out some errors within transactions and eventually improve the overall experience.
+
+### Can the logging feature be turned off?
+By default, the logging feature is enabled. There is an option to turn off the logging feature by changing the value of **isLoggingEnabled** within the **initialize()** function. Below is the sample call:
+
+<br/><br/>**Java:**
+
+```java
+
+import as.brank.sdk.tap.direct.DirectTapSDK;
+
+DirectTapSDK.INSTANCE.initialize(context, apiKey, null, false, false);
+```
+
+<br/><br/> **Kotlin:**
+
+```kotlin
+
+import `as`.brank.sdk.tap.direct.DirectTapSDK
+
+DirectTapSDK.initialize(context, apiKey, null, false, false)
+```

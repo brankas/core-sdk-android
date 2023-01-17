@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.0.0 - 2023-01-16
+
+### Added
+
+-  **language** under **Client** in **DirectTapRequest** to be able to change the language within Tap Web App (default value is English)
+-  optional internal logging to monitor API Service Calls and Tap Web Screen Flow
+-  **isLoggingEnabled** within **initialize()** function to choose whether to enable or disable sending of logs; default value is true
+
+### Changed
+
+- Kotlin version from **1.5.1** to **1.7.1**
+
 ## 3.5.2 - 2022-10-21
 
 ### Fixed
