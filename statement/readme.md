@@ -1,6 +1,6 @@
 # Statement Tap SDK for Android
 ***
-*Version:* 3.1.2
+*Version:* 4.0.0
 ***
 
 
@@ -11,6 +11,7 @@
   4. [Initialization](#initialization)
   5. [Usage](#usage)
   6. [Statement List Download](#statement-list-download)
+  7. [App Tracking and Privacy Changes](#app-tracking-privacy)
 
 ***
 
@@ -67,11 +68,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:3.1.2"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:4.0.0"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:statement-tap:3.1.2"
+    	implementation "com.brankas.tap:statement-tap:4.0.0"
 	}
 
 
@@ -168,6 +169,8 @@ In order to use the checkout function, a **StatementTapRequest** is needed to be
 
 9. **statementRetrievalRequest** - pertains to the statement retrieval after Tap Web Session. **startDate** and **endDate** can be configured to retrieve transactions within date range
 
+10. **includeBalance** - refers to the inclusion of balance within statement retrieval; default value is false
+
 Here is a sample on how to use it and call:
 
 <br/><br/> **Kotlin:**
@@ -180,6 +183,8 @@ import `as`.brank.sdk.tap.CoreListener
 import tap.model.BankCode
 import tap.model.Country
 import tap.request.statement.StatementTapRequest
+import tap.model.statement.StatementResponse
+import tap.model.Reference
 
 val request = StatementTapRequest.Builder()
             .country(Country.PH)
@@ -194,13 +199,15 @@ StatementTapSDK.checkout(this, request.build(), object: CoreListener<String>() {
                 println("DATA: "+data)
         }
 
-}, 3000, false, true);
+}, 3000, false, true);3.1.23.1.2
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(requestCode == 2000) {
             if(resultCode == RESULT_OK) {
-                val statementId = data?.getStringExtra(StatementTapSDK.STATEMENT_ID)
+                val statementResponse = data?.getParcelableExtra<Reference<StatementResponse>>(
+                    StatementTapSDK.STATEMENTS)
+                val statementId = statementResponse?.get?.statementId
                 Toast.makeText(this,
                     "Statement Retrieval Successful! Here is the statement id: $statementId",
                     Toast.LENGTH_SHORT).show()
@@ -224,6 +231,8 @@ import as.brank.sdk.tap.CoreListener;
 import tap.model.BankCode;
 import tap.model.Country;
 import tap.request.statement.StatementTapRequest;
+import tap.model.statement.StatementResponse;
+import tap.model.Reference;
 
 StatementTapRequest.Builder request=new StatementTapRequest.Builder()
         .country(Country.PH)
@@ -232,31 +241,31 @@ StatementTapRequest.Builder request=new StatementTapRequest.Builder()
         .failURL("https://hello.com")
         .organizationName("Organization Name");
 
-        StatementTapSDK.INSTANCE.checkout(this,request.build(),new CoreListener<String>(){
-@Override
-public void onResult(String data,CoreError error){
-        System.out.println("DATA: "+data);
-        }
-
-        },3000,false,true);
+        StatementTapSDK.INSTANCE.checkout(this, request.build(),new CoreListener<String>(){
+		@Override
+		public void onResult(String data,CoreError error){
+        		System.out.println("DATA: "+data);
+        	}
+        }, 3000, false, true);
 
 @Override
 public void onActivityResult(int requestCode,int resultCode,Intent data){
-        super.onActivityResult(requestCode,resultCode,data);
-        if(requestCode==3000){
-        if(resultCode==RESULT_OK){
-        String statementId=data.getStringExtra(StatementTapSDK.STATEMENT_ID);
-        Toast.makeText(this,
-        "Statement Retrieval Successful! Here is the statement id: "+statementId,
-        Toast.LENGTH_SHORT).show();
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == 3000){
+        	if(resultCode == RESULT_OK){
+        		StatementResponse statementResponse = data.getParcelableExtra.getParcelableExtra<Reference<StatementResponse>>(
+                    StatementTapSDK.STATEMENTS)
+        		String statementId = statementResponse.get().statementId;
+        		Toast.makeText(this, "Statement Retrieval Successful! Here is the statement id: "+statementId,
+        		Toast.LENGTH_SHORT).show();
+        	}
+        	else{
+        		String error = data.getStringExtra(StatementTapSDK.ERROR);
+        		String errorCode = data.getStringExtra(StatementTapSDK.ERROR_CODE);
+        		Toast.makeText(this, error+" "+errorCode, Toast.LENGTH_LONG).show();
+        	}
         }
-        else{
-        String error=data.getStringExtra(StatementTapSDK.ERROR);
-        String errorCode=data.getStringExtra(StatementTapSDK.ERROR_CODE);
-        Toast.makeText(this,error+" "+errorCode,Toast.LENGTH_LONG).show();
-        }
-        }
-        }
+}
 ```
 
 
@@ -334,6 +343,36 @@ The **actionBarText** in the **checkout** function is set to null by default - t
 	```
 
 ***NOTE:*** **data** returned in the **onResult()** function pertains to the directory or URI path where the file has been saved to and the statement data in byte array. Thus, if it is null, an **error** occurred. If **first** in pair is null, the file is not saved to any directory in the mobile phone. Also, there is an option to save the CSV or not; just update **enableSaving** parameter.
+
+<a name="app-tracking-privacy">
+## App Tracking and Privacy Changes
+</a>
+
+### What is added?
+
+Starting v4.0 of Statement Tap SDK, a new feature has been added internally - **logging of Tap Web Flow**. This feature helps Brankas to track the flow of a transaction while performing a **Statement Retrieval** within Tap Web App. This will aid in pointing out some errors within transactions and eventually improve the overall experience.
+
+### Can the logging feature be turned off?
+By default, the logging feature is enabled. There is an option to turn off the logging feature by changing the value of **isLoggingEnabled** within the **initialize()** function. Below is the sample call:
+
+<br/><br/>**Java:**
+
+```java
+
+import as.brank.sdk.tap.statement.StatementTapSDK;
+
+StatementTapSDK.INSTANCE.initialize(context, apiKey, null, false, false);
+```
+
+<br/><br/> **Kotlin:**
+
+```kotlin
+
+import `as`.brank.sdk.tap.statement.StatementTapSDK
+
+StatementTapSDK.initialize(context, apiKey, null, false, false)
+```
+
 
 
 

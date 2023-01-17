@@ -14,6 +14,7 @@ as.brank.sdk.core
 as.brank.sdk.core.statement
 as.brank.sdk.tap.statement
 tap.model
+tap.model.balance
 tap.model.statement
 tap.request.statement
 
