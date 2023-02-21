@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.1.0 - 2023-02-21
+
+### Added
+
+- **showBackButton** parameter in **checkout()** function to enable showing of a back button within the ActionBar
+- function **closeTap()** to deliberately close the Tap Web App
+- function **refreshTap()** to reload the current web page being shown within Tap Web App
+- auto-refresh mechanism wherein the web page automatically reloads when Internet Connection has been restored
+- detection when user is disconnected from the Internet when inside the Tap Web App
+
 ## 4.0.0 - 2023-01-16
 
 ### Added
