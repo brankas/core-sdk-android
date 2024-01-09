@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>FundTransferFee</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async="async"></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer="defer"></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
+</head>
+<body>
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+                    <a class="library-name--link" href="../../../index.html">
+                            app
+                    </a>
+            </div>
+            <div class="library-version">
+            </div>
+        </div>
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":app:dokkaHtml/release">androidJvm</button>
+        </div>
+    </div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
+    </div>
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
+<div class="main-content" data-page-type="classlike" id="content" pageIds="app::tap.model.direct/FundTransferFee///PointingToDeclaration//492899073">
+  <div class="breadcrumbs"><a href="../../../index.html">app</a><span class="delimiter">/</span><a href="../index.html">tap.model.direct</a><span class="delimiter">/</span><span class="current">FundTransferFee</span></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Fund</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Fee</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">FundTransferFee</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>idOnlineTransferLimit<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>idOnlineTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>idllgTransferLimit<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>idllgTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>idrtgsTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>phInstapayTransferLimit<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>phInstapayTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>phPesonetTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>intrabankTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></span></span><span class="token punctuation">)</span></div><p class="paragraph">contains the additional fee for bank transfer</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
+    <div class="tabs-section-body">
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1168167486%2FConstructors%2F492899073" anchor-label="FundTransferFee" id="-1168167486%2FConstructors%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-fund-transfer-fee.html"><span>Fund</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1168167486%2FConstructors%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">currency<span class="token operator">: </span><a href="../../tap.model/-currency/index.html">Currency</a><span class="token punctuation">, </span></span><span class="parameter ">fee<span class="token operator">: </span><span data-unresolved-link="fastcheckout/FundTransferFee///PointingToDeclaration/">FundTransferFee</span></span></span><span class="token punctuation">)</span></div><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">idOnlineTransferLimit<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter ">idOnlineTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter ">idllgTransferLimit<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter ">idllgTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter ">idrtgsTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter ">phInstapayTransferLimit<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter ">phInstapayTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter ">phPesonetTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a><span class="token punctuation">, </span></span><span class="parameter ">intrabankTransferFee<span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="1635272543%2FProperties%2F492899073" anchor-label="idllgTransferFee" id="1635272543%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="idllg-transfer-fee.html"><span>idllg</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1635272543%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="idllg-transfer-fee.html">idllgTransferFee</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-2073345334%2FProperties%2F492899073" anchor-label="idllgTransferLimit" id="-2073345334%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="idllg-transfer-limit.html"><span>idllg</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Limit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2073345334%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="idllg-transfer-limit.html">idllgTransferLimit</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1169323393%2FProperties%2F492899073" anchor-label="idOnlineTransferFee" id="-1169323393%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id-online-transfer-fee.html"><span>id</span><wbr></wbr><span>Online</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1169323393%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="id-online-transfer-fee.html">idOnlineTransferFee</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-50577942%2FProperties%2F492899073" anchor-label="idOnlineTransferLimit" id="-50577942%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="id-online-transfer-limit.html"><span>id</span><wbr></wbr><span>Online</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Limit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-50577942%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="id-online-transfer-limit.html">idOnlineTransferLimit</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1363307450%2FProperties%2F492899073" anchor-label="idrtgsTransferFee" id="1363307450%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="idrtgs-transfer-fee.html"><span>idrtgs</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1363307450%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="idrtgs-transfer-fee.html">idrtgsTransferFee</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-896988787%2FProperties%2F492899073" anchor-label="intrabankTransferFee" id="-896988787%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="intrabank-transfer-fee.html"><span>intrabank</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-896988787%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="intrabank-transfer-fee.html">intrabankTransferFee</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="2053831158%2FProperties%2F492899073" anchor-label="phInstapayTransferFee" id="2053831158%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ph-instapay-transfer-fee.html"><span>ph</span><wbr></wbr><span>Instapay</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2053831158%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="ph-instapay-transfer-fee.html">phInstapayTransferFee</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="729525153%2FProperties%2F492899073" anchor-label="phInstapayTransferLimit" id="729525153%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ph-instapay-transfer-limit.html"><span>ph</span><wbr></wbr><span>Instapay</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Limit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="729525153%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="ph-instapay-transfer-limit.html">phInstapayTransferLimit</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1612686649%2FProperties%2F492899073" anchor-label="phPesonetTransferFee" id="-1612686649%2FProperties%2F492899073" data-filterable-set=":app:dokkaHtml/release"></a>
+          <div class="table-row" data-filterable-current=":app:dokkaHtml/release" data-filterable-set=":app:dokkaHtml/release">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="ph-pesonet-transfer-fee.html"><span>ph</span><wbr></wbr><span>Pesonet</span><wbr></wbr><span>Transfer</span><wbr></wbr><span><span>Fee</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1612686649%2FProperties%2F492899073"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":app:dokkaHtml/release"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="ph-pesonet-transfer-fee.html">phPesonetTransferFee</a><span class="token operator">: </span><a href="../../tap.model/-amount/index.html">Amount</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

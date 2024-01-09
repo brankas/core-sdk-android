@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 4.1.0
+*Version:* 4.2.0
 ***
 
 
@@ -49,6 +49,7 @@
 
 1. **Android Studio 3.0** but preferably the latest version
 2. Minimum Android SDK: **API 21** or **Android 5.0**
+3. Target SDK Version: at least **API 34** or **Android 14** 
 
 ## Installation
 
@@ -70,10 +71,10 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:4.1.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:4.2.0"** to set the SDK as a dependency for the application. This should look like:
 	````gradle
 	dependencies {
-    	implementation "com.brankas.tap:direct-tap:4.1.0"
+    	implementation "com.brankas.tap:direct-tap:4.2.0"
 	}
 	````
 
@@ -82,13 +83,13 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```gradle
 	dependencies {
  		implementation 'com.google.protobuf:protobuf-javalite:3.20.0'
-    		implementation 'io.grpc:grpc-okhttp:1.45.1'
-    		implementation('io.grpc:grpc-protobuf-lite:1.45.1') {
+    		implementation 'io.grpc:grpc-okhttp:1.51.1'
+    		implementation('io.grpc:grpc-protobuf-lite:1.51.1') {
         			exclude group: 'com.google.protobuf'
     		}
-    		implementation 'io.grpc:grpc-stub:1.45.1'
-			implementation 'io.reactivex.rxjava3:rxjava:3.0.6'
-    		implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    		implementation 'io.grpc:grpc-stub:1.51.1'
+			implementation 'io.reactivex.rxjava3:rxjava:3.1.6'
+    		implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
 			//implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kotlin_coroutines_version"
 			implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2'
 	}
@@ -115,7 +116,15 @@ plugins {
 }
 	````
 
-5. Add the permission **android.permission.INTERNET** in your **AndroidManifest.xml** file to allow your application to access Internet, which is required to use Tap API Services.
+5. In the defaultConfig section, ensure that the target SDK Version is **API 34**. There might be a manifest merger conflict that will arise if the target version is not met.
+
+	````gradle
+defaultConfig {
+		targetSdkVersion 34
+}
+	````
+
+6. Add the permission **android.permission.INTERNET** in your **AndroidManifest.xml** file to allow your application to access Internet, which is required to use Tap API Services.
 
     ```xml
     <uses-permission android:name="android.permission.INTERNET" />
