@@ -2,7 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
-## 4.1.0 - 2023-02-21
+## 4.2.0 - 2024-01-08
+
+### Added
+
+- **hasPdfUpload** parameter in **StatementTapRequest** to enable PDF Upload within Tap Web App
+
+### Changed
+
+- **Kotlin** version from **1.7.1** to **1.9.10**
+- **rxjava** version from **3.0.6** to **3.1.6**
+- **rxandroid** version from **3.0.0** to **3.0.2**
+- **core-ktx** version from **1.9.0** to **1.12.0**
+- **gRPC** version from **1.45.1** to **1.51.1**
+- **targetSDKVersion** from **33** to **34**
+- **protobuf-javalite** version from **3.20.0** to **3.21.7**
+
+## 4.1.0 - 2023-02-07
 
 ### Added
 
@@ -10,7 +26,6 @@ All notable changes to this project will be documented in this file.
 - function **closeTap()** to deliberately close the Tap Web App
 - function **refreshTap()** to reload the current web page being shown within Tap Web App
 - auto-refresh mechanism wherein the web page automatically reloads when Internet Connection has been restored
-- detection when user is disconnected from the Internet when inside the Tap Web App
 
 ## 4.0.0 - 2023-01-16
 
