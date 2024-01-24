@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.2.1 - 2024-01-24
+
+### Fixed
+
+- crash when calling **checkoutViaFragment** function due to uninitialized view error
+
 ## 4.2.0 - 2024-01-08
 
 ### Added
