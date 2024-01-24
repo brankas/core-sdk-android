@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 4.2.0
+*Version:* 4.2.1
 ***
 
 ### What is Direct Tap SDK?
@@ -19,7 +19,7 @@
 
 # Statement Tap SDK for Android
 ***
-*Version:* 4.2.0
+*Version:* 4.2.1
 ***
 
 ### What is Statement Tap SDK?

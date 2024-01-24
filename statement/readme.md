@@ -1,6 +1,6 @@
 # Statement Tap SDK for Android
 ***
-*Version:* 4.2.0
+*Version:* 4.2.1
 ***
 
 
@@ -69,11 +69,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:4.2.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:statement-tap:4.2.1"** to set the SDK as a dependency for the application. This should look like:
 
 	```gradle
 	dependencies {
-    	implementation "com.brankas.tap:statement-tap:4.2.0"
+    	implementation "com.brankas.tap:statement-tap:4.2.1"
 	}
 
 
