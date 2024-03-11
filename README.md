@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 4.3.0
+*Version:* 4.4.0
 ***
 
 ### What is Direct Tap SDK?
