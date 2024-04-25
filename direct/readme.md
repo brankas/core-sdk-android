@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 4.4.0
+*Version:* 4.5.0
 ***
 
 
@@ -71,10 +71,10 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:4.4.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:4.5.0"** to set the SDK as a dependency for the application. This should look like:
 	````gradle
 	dependencies {
-    	implementation "com.brankas.tap:direct-tap:4.4.0"
+    	implementation "com.brankas.tap:direct-tap:4.5.0"
 	}
 	````
 
@@ -83,11 +83,11 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```gradle
 	dependencies {
  		implementation 'com.google.protobuf:protobuf-javalite:3.20.0'
-    		implementation 'io.grpc:grpc-okhttp:1.51.1'
-    		implementation('io.grpc:grpc-protobuf-lite:1.51.1') {
+    		implementation 'io.grpc:grpc-okhttp:1.63.0'
+    		implementation('io.grpc:grpc-protobuf-lite:1.63.0') {
         			exclude group: 'com.google.protobuf'
     		}
-    		implementation 'io.grpc:grpc-stub:1.51.1'
+    		implementation 'io.grpc:grpc-stub:1.63.0'
 			implementation 'io.reactivex.rxjava3:rxjava:3.1.6'
     		implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
 			//implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kotlin_coroutines_version"

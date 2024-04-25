@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.5.0 - 2024-04-17
+
+### Fixed
+
+- Error Code having extra text (e.g. INTERNAL: DIRXXX1234) in some cases
+
+### Changed
+
+- **gRPC** version from **1.51.1** to **1.63.0**
+
+### Added
+
+- SDK logs pertaining to WebView activity and Network Connection
+
 ## 4.4.0 - 2024-03-06
 
 ### Changed
