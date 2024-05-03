@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.6.0 - 2024-05-02
+
+### Fixed
+
+- Transaction being cancelled when QRPH Image Download is executed
+- Default Status Messages
+
+### Added
+
+- **Lottie Animation Dependency** (*implementation "com.airbnb.android:lottie:4.2.2"*)
+
+### Changed
+
+- QRPH Image Download Screen Flow (Added Loading Page after download)
+
 ## 4.5.0 - 2024-04-17
 
 ### Fixed

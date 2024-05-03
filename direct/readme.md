@@ -1,6 +1,6 @@
 # Direct Tap SDK for Android
 ***
-*Version:* 4.5.0
+*Version:* 4.6.0
 ***
 
 
@@ -71,10 +71,10 @@ This set of instructions assumes that the IDE being used is Android Studio
 	```
 **NOTE: You can use any GitHub Account in filling up the credentials**
 
-2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:4.5.0"** to set the SDK as a dependency for the application. This should look like:
+2. In your app build.gradle file, add this line inside the dependencies configuration: **implementation "com.brankas.tap:direct-tap:4.6.0"** to set the SDK as a dependency for the application. This should look like:
 	````gradle
 	dependencies {
-    	implementation "com.brankas.tap:direct-tap:4.5.0"
+    	implementation "com.brankas.tap:direct-tap:4.6.0"
 	}
 	````
 
@@ -92,6 +92,7 @@ This set of instructions assumes that the IDE being used is Android Studio
     		implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
 			//implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$kotlin_coroutines_version"
 			implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.2'
+			implementation 'com.airbnb.android:lottie:4.2.2'
 	}
 
 	compileOptions {
