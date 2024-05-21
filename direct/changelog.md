@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.7.0 - 2024-05-13
+
+### Fixed
+
+- QRPH Flow Termination
+
+### Added
+
+- more Bank Codes as source and destination
+
 ## 4.6.0 - 2024-05-02
 
 ### Fixed
