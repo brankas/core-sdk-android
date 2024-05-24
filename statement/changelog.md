@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## 4.3.0 - 2024-05-20
+
+### Added
+
+- more Bank Codes as source and destination
+- SDK logs pertaining to WebView activity and Network Connection
+- **Lottie Animation Dependency** (*implementation "com.airbnb.android:lottie:4.2.2"*)
+
+### Changed
+
+- **gRPC** version from **1.51.1** to **1.63.0**
+
 ## 4.2.1 - 2024-01-24
 
 ### Fixed

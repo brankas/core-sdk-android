@@ -19,7 +19,7 @@
 
 # Statement Tap SDK for Android
 ***
-*Version:* 4.2.1
+*Version:* 4.3.0
 ***
 
 ### What is Statement Tap SDK?
